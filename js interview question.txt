@@ -1,0 +1,230 @@
+1.)what is javascript?
+Ans- JavaScript (JS) is a high-level, versatile programming language primarily used to make web pages interactive and dynamic.If we look at web development like building a house:HTML is the structure and the walls (the foundation).CSS is the paint, the furniture, and the interior design (the styling).JavaScript is the electricity and plumbing—it makes the doors open, the lights turn on, and the water run (the behavior and interactivity).
+Key Characteristics of JavaScript:Client-Side and Server-Side: Originally, it was only meant to run inside a user's web browser (client-side). Today, thanks to environments like Node.js, it can also run on web servers and backend databases.Dynamically Typed: You do not have to strictly define what type of data a variable holds (like a number or text) before using it. The engine figures it out on the fly.Event-Driven: It is designed to listen for and react to user actions. When you click a button, scroll down a page, or submit a form, JavaScript is what catches that "event" and triggers a response.Single-Threaded but Asynchronous: It processes one command at a time on a single main thread. However, it uses a mechanism called the "Event Loop" to handle long tasks (like fetching movie data from TMDB) in the background so the website doesn't freeze up while waiting. 
+
+2.)what is diff b/w javascript and typescript?
+Ans- The main difference between JavaScript and TypeScript is that TypeScript is a "superset" of JavaScript that adds static typing. While JavaScript determines variable types while the program is running (dynamic typing), TypeScript allows you to define types upfront and catches errors while you are still writing the code (static typing).
+
+3.)diff var, let and const?
+Ans- 1. Scope (Where does the variable live?)
+
+var is Function Scoped: If you create a var inside a simple if statement or a for loop, it "leaks" out and can be accessed outside of that block. This caused a lot of bugs in older JavaScript!
+
+let and const are Block Scoped: They are trapped inside the nearest set of curly braces {}. If you declare them inside an if statement, they do not exist outside of it. This is much safer and more predictable.
+
+2. Updating and Redeclaring
+
+var lets you do whatever you want. You can redeclare the exact same variable twice, and JavaScript won't complain.
+
+let allows you to update its value later (reassignment), but you cannot declare a variable with the same name twice in the same scope.
+
+const stands for constant. Once you assign a value to it, you cannot reassign it to something else.
+
+Pro-Tip (Interviewer Trap!): If you make an array or an object using const, you can still push new items into the array or change the object's properties. You just can't reassign the variable to a completely new array or object.
+
+3. Hoisting (The weird part)
+All three are technically moved to the top of the file before the code runs (Hoisting).
+
+If you try to console.log a var before you declare it, it will just say undefined.
+
+If you try to console.log a let or const before you declare it, the app will throw a ReferenceError and crash. They are stuck in what JavaScript calls the "Temporal Dead Zone" until the code reaches the line where they are actually defined.
+
+4.)what are the main advantage of js over python and java?
+Ans- JavaScript is the only programming language that runs natively inside every single web browser in the world. If you want to build a dynamic, interactive frontend for a website, you have to use JavaScript (or a language like TypeScript that compiles down to JavaScript). Python and Java simply cannot run directly in the browser the way JS does.
+
+Because of this, JS allows for Full-Stack Unification. With the invention of Node.js, a team can write their frontend (React/Angular) and their backend server in the exact same language. This means developers can seamlessly switch between frontend and backend tasks without context-switching to a new language.
+
+Beyond that, here is how JS compares to each language specifically:
+
+JavaScript vs. Python
+Python is incredible for data science, AI, and scripting, but JavaScript wins in a few key areas:
+
+Speed (The V8 Engine): JavaScript is generally much faster at runtime than Python. Modern JS engines (like Google's V8) use Just-In-Time (JIT) compilation to execute code incredibly fast. Python is traditionally an interpreted language and can be quite slow by comparison.
+
+Asynchronous by Default: JavaScript was built from day one to handle the web, which means waiting for things (like a slow API or a database). Its non-blocking Event Loop is perfectly designed to handle thousands of simultaneous web requests without breaking a sweat. Python can do async, but it requires extra libraries and isn't native to its core design.
+
+JavaScript vs. Java
+Java is a powerhouse for massive, enterprise-level systems and Android apps, but JavaScript has major advantages for modern web development:
+
+Lightweight and Fast to Write: Java is famously "verbose" (wordy) and strictly typed. You have to write a lot of boilerplate code, classes, and types just to get a simple program running. JavaScript is dynamically typed and highly flexible, allowing developers to build and prototype applications much faster.
+
+No Compilation Step Required: To run Java, you must compile your code into bytecode and run it on the Java Virtual Machine (JVM), which takes time and memory. JavaScript can be executed instantly the moment you hit save and refresh your browser.
+
+Summary
+To wrap it up: You choose Python for Data Science, you choose Java for massive, heavy-duty enterprise banking backends, but you choose JavaScript because it rules the web, allows for rapid development, and lets you build an entire full-stack application with a single language.
+
+5.)what are diff data types of js?
+Ans- 
+6.)what are primitive data types?
+Ans- 
+7.)what are non primitive data types or reference data types?
+Ans- 
+8.)diff b/w copy by value and copy by reference?
+Ans- 
+9.)how to debug js in browser?
+Ans- Gemini said
+Debugging JavaScript directly in the browser is primarily done using Browser DevTools (F12 or Right-click > Inspect). It is much more powerful than using console.log() because it allows you to pause time and inspect the "live" state of your code.
+
+1. The Console (The Basics)
+The Console tab is your scratchpad. You can view errors, log data, and even run snippets of JavaScript on the fly to test logic without refreshing the page.
+
+Tip: Use console.table(yourArray) to see data in a clean, sortable grid instead of a messy list.
+
+Tip: Use console.dir(element) to see all the properties of a DOM node.
+
+2. The Sources Tab (The Powerhouse)
+This is where you perform "Breakpoint Debugging." Instead of guessing what's wrong, you can stop the code execution at a specific line.
+
+How to set a Breakpoint:
+Open DevTools and go to the Sources tab.
+
+Find your JavaScript file in the file navigator on the left.
+
+Click the line number where you want the code to pause. A blue marker will appear.
+
+Trigger the action in your browser (e.g., click a button). The browser will "freeze," and the line will be highlighted.
+
+3. Stepping Through Code
+Once your code is paused at a breakpoint, use the Execution Controls (usually top-right) to move through it:
+
+Resume (Play icon): Runs the code until the next breakpoint.
+
+Step Over (Curved arrow): Moves to the next line in the current file.
+
+Step Into (Down arrow): If the current line calls a function, this jumps inside that function.
+
+Step Out (Up arrow): Finishes the current function and jumps back to where it was called.
+
+4. Inspecting Variables (Watch & Scope)
+While the code is paused, you can see exactly what every variable equals at that precise moment:
+
+Hover: Hover your mouse over any variable in the code editor to see its current value.
+
+Scope Pane: Look at the "Scope" section on the right to see all Local and Global variables currently in memory.
+
+Watch: Add specific variables to the "Watch" list to track how they change as you step through the code.
+
+5. Specialized Breakpoints
+Sometimes you don't know which line is causing the issue. You can tell the browser to pause automatically on specific events:
+
+Event Listener Breakpoints: Pause whenever a "click," "keypress," or "form submit" occurs.
+
+XHR/Fetch Breakpoints: Pause whenever the browser makes a network request.
+
+Pause on Exceptions: Click the "Pause" icon with a circle around it to stop the code only when an error is actually thrown.
+
+6. Network Tab (API Debugging)
+If your JavaScript is failing because of data from a server:
+
+Go to the Network tab.
+
+Click on the specific request (Fetch/XHR).
+
+Check the Payload (what you sent) and the Response (what the server sent back).
+
+10.)can we javascript in the browser and outside the browser?
+Ans- 1. Inside the Browser (Client-Side)In the browser, JavaScript is used to make websites interactive. The browser provides a specific set of APIs that allow the code to talk to the webpage and the user.The Engine: Every browser has its own (Chrome uses V8, Firefox uses SpiderMonkey, Safari uses JavaScriptCore).Unique Powers:The DOM: You can manipulate HTML elements (change colors, move buttons).The Window Object: You can control browser-specific features like alerts, local storage, and the URL bar.User Events: You can listen for clicks, scrolls, and mouse movements.Limitations: For security, browser JS cannot access your computer's files directly or manage your hardware.2. Outside the Browser (Server-Side / Desktop)To run JavaScript outside the browser, you use a "Runtime" like Node.js, Deno, or Bun. These programs take the same engine used in browsers (usually V8) and wrap it in a different set of tools.The Runtime: Most commonly Node.js.Unique Powers:File System: You can read, write, and delete files on your hard drive.Networking: You can build your own web servers (like Express) to handle database requests.OS Access: You can check CPU usage, memory, and interact with the operating system.Limitations: There is no "Window" or "Document." If you try to run document.getElementById() in Node.js, it will throw an error because there is no webpage to look at.
+11.)what is v8  engine
+12.)how to declare variable in js
+13.)what is typeof operator
+14.)what is instanceof operator
+15.)what is diff b/w == and ===(eqality)
+16.)what is diff b/w null and undefined
+17.)what is event bubbling
+18.)what is event propagation
+19.)what is diff b/w map and set
+20.)what is diff b/w map,set, weakmap, and weakset
+what is the use of preventdefault
+how to stop the default behaviour of form when we submit
+what is function
+how to define the function , call the function
+what is named function
+what is function expression
+what is function declaration
+what is arrow function
+what is anonymous function
+what is IIFE function
+what is recursive function
+what is high order function
+what is closure
+what is inheritance
+what is object.prototype
+how to add new property to the existing object in js
+what is this keyword
+what are diff scopes in js 
+what is global scope, local scope, function scope, lexical scope
+what is local storage
+what is session storage
+what is cookie
+diff b/w local storage and session storage
+what is hoisting and its usage
+what is use strict
+what is diff b/w normal function and arrow function 
+what is es6 latest feature
+what is destructuring
+what is object destructuring and array destructuring
+what is optional chaining operator
+what is nullish coaleshing operator 
+what is ternary operator 
+what is event loop
+diff js events
+what is diff ways of adding events in js 
+what is DOM and explain in detail
+how to add the class, remove the class, add the style, remove the style using
+what is toggle in DOM
+how to create the element using DOM
+diff b/w append and appendchild
+what are template literals
+what are the default parameters in functions
+what is rest operator
+what is spread operator
+diff b/w rest and spread
+what is settimeout
+what is setInterval
+diff b/w settimeout vs setInterval
+what is synchronous
+what is asynchronous
+diff b/w sync and async
+what is callback and give the explanation
+what is callback hell
+what is promise
+what is promise chaining
+diff promise methods, promise.all, promise.any, promise.race
+what is async/await
+what is fetch
+what is for loop, 
+what is for....in
+what is for....of 
+what is foreach
+diff b/w for....in and for....of 
+what are conditions in js 
+what is if, if else and else if 
+what is switch
+what is "this" keyword in js 
+what is BOM
+what is super key in js 
+what is JSON.stringfy
+what is JSON.parse 
+diff b/w json.stringfy and json.parse 
+what is queryselector
+what is queryselectorall
+diff b/w queryselector and queryselectorall
+what is document.getElementById
+what is document.getElementByClassName
+what is document.getElementByTagName
+what is pure function
+what is impure function
+diff pure and impure function
+what is regex
+what is js modules
+how js works behind the screen
+how do we debounce a function in js
+how do we throttle a function in js
+what is error handling in js 
+how to handle the errors in js 
+what is try, catch, finally, throw in error handling 
+what is JSON 
+how to clone an object 
+
+
+

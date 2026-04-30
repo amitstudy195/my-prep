@@ -1,0 +1,158 @@
+interview questions
+
+what is web development 
+what is the difference b/w a website and a web application 
+what is a client and what is server
+what is the role of the browser in web communication 
+what is the internet 
+what is DNS and why it is needed 
+what happend when we type a URL in the browser 
+what is the IP address 
+difference between HTTP and HTTPS
+what is the domain name
+what is the static website 
+what is the dynamic website 
+give examples of static and dynamic websites 
+which technolgies are used to build dynamic websites 
+
+what is the full stack development 
+what are frontend and backend 
+what is the MERN stack 
+Role of mongoDB express react node in a project 
+can a developer work only as FE or BE 
+
+what is HTML and what is its role 
+what is css used for 
+what is javascript responsible for in a website 
+can a website work without javascipt 
+dif b/w frontend and backend technolgies
+what happend if css is removed from the website 
+how do HTML, CSS and JS work together 
+
+what is VS code 
+why do developers use code editors 
+name some useful vs code extensions 
+wha is the purpose of prettier 
+what is live server 
+
+what is a terminal 
+diff b.w gui and client
+what does CD command do 
+why should developer learn terimanl basics 
+
+what is an API 
+why do we need API's 
+what is the REST API
+diff between API and web service 
+Types of API's public private and partner 
+
+What is HTTP 
+what is the request and response 
+what are HTTP methods 
+Explain the GET, POST, PUT, PATCH AND DELETE 
+what are HTTP status codes 
+diff b/w 200, 201, 400, 401, 403, 404, 500
+what are headers in HTTP 
+what is the request Body 
+
+what is JSON 
+why is JSON used intead of XML
+diff between object and JSON
+what are key-value pairs 
+
+
+what is API rate limiting 
+what is rate limitng important 
+what is the auth token 
+diff b/w session and token 
+what is jwt 
+
+Name some popular public API's 
+what is JSONplaceholder 
+have you used any public API in a project 
+
+
+git & Github version control 
+
+what is version control 
+why do developers use git 
+diff b/w git and github 
+what is repository 
+
+
+what does git init 
+what is git status 
+what is git add 
+what is git commit 
+what is git log 
+what is the commit 
+
+what is branch 
+why do we use branches 
+what is merging 
+what is github used for 
+how do you push cod in github 
+what is pull request 
+
+what is cloud computing 
+why do we use cloud services 
+diff b/w local server and cloud server 
+what are the advantanges of cloud 
+
+what is hosting
+diff b/w shared hosting and cloud hosting
+what is netlify used for 
+what is vercel 
+what is render 
+
+what is deployment 
+what is CI/CD
+what is continous integration 
+what is continous deployment
+how does code code go from laptop to live website 
+what happend during a build process 
+
+why is security important in web development
+what can happen if a website is not secure 
+
+what is authentication 
+what is authorization 
+diff b/w login and permission 
+example of authentication vs authorization 
+
+
+what is https 
+diff b/w http and https 
+what is SSL/TLS 
+what is certificate 
+
+what is CORS 
+why does CORS exist 
+what are cookies 
+what is localstorage 
+what is sessionStorage 
+diff b/w cookies, localstorage and sessionStorage
+
+what is SQL injection 
+what is XSS 
+what is CSRF
+what is phishing 
+
+how do website protect user data 
+how do API's handle authentication
+what is bearer token 
+why should token be kept secret 
+
+what is problem solving in programming 
+why is problem solving important for developer
+how do computers think diffently from 
+
+what are inputs and outputs 
+what is an algorithm 
+what is looping 
+what is iteration 
+
+what is flowchart 
+why do we use flowchart
+
+
