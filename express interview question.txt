@@ -1,0 +1,17 @@
+1.)how do you handle cors in express?
+Ans- To use CORS (Cross-Origin Resource Sharing) in Express, the standard approach is to use the cors middleware package. This middleware handles the necessary HTTP headers and preflight requests required by browsers to allow cross-origin communication.
+npm install cors
+const cors = require('cors');
+app.use(cors());
+
+2.)what is diff b/w express js and koa js?
+Ans- The main difference between Express.js and Koa.js is their philosophy: Express is a "batteries-included" framework that provides many built-in features, while Koa is a lightweight, modular foundation that lets you choose only the tools you need. Both were created by the same core team, but Koa was designed as a modern, "next-generation" alternative that uses newer JavaScript features like async/await to eliminate callback hell.
+
+3.)how to handle authentication and authorization in express?
+Ans- Handling authentication (verifying who you are) and authorization (verifying what you are allowed to do) in Express is best achieved using middleware to intercept requests, validate JSON Web Tokens (JWT), and check user roles before granting access to specific routes.
+
+4.)what is diff b/w controller and middleware in express?
+Ans- In Express, technically all controllers are middleware. However, developers use these terms to describe different roles in the request-response cycle.
+Core Difference
+Middleware: Functions that process the request before it reaches the final destination. They handle generic tasks like logging, authentication, or parsing data.
+Controller: The "final" function (or route handler) that processes the actual business logic and sends the response back to the client.

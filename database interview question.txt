@@ -1,0 +1,31 @@
+1.)how can we secure mongodb databases?
+Ans- To secure a MongoDB database, you must implement layers of protection covering access control, network security, and data encryption. By default, MongoDB often lacks these strict settings, so manual configuration is essential for self-managed deployments.
+1. Enable Authentication & Access Control
+2. Harden Network Security
+3. Implement Strong Encryption
+4. Monitoring & Maintenance
+
+2.)how can you manage data consistency in mongodb?
+Ans- Managing data consistency in MongoDB involves a combination of schema design strategies and database-level configurations to balance performance and data accuracy.
+
+3.)how can you implement transaction in mongodb?
+Ans- To implement transactions in MongoDB, you must use a Replica Set or a Sharded Cluster; transactions are not supported on standalone deployments. MongoDB provides two main ways to handle transactions: the Callback API (recommended for most users) and the Core API (for manual control).
+
+ Callback API
+Create a Session: Use client.startSession().
+Execute the Transaction: Use the withTransaction() method on that session.
+Automatic Actions: If the code inside the callback finishes successfully, the transaction commits; if an error is thrown, it aborts automatically.
+
+Core API
+Start Session: const session = client.startSession();.
+Start Transaction: session.startTransaction();.
+Perform Operations: Pass the { session } object as an option to every database operation (e.g., db.collection.insertOne({ ... }, { session });).
+Commit: await session.commitTransaction(); if successful.
+Abort: await session.abortTransaction(); if an error occurs.
+End Session: session.endSession();.
+
+4.)in mern app how can you implement ssr?
+Ans- In a MERN stack application, you can implement Server-Side Rendering (SSR) by using specialized React APIs on your Express server to convert components into HTML strings before sending them to the client.
+
+5.)explain about the indexing in mongodb and about the performance impact?
+Ans- In MongoDB, indexing is a method used to improve the efficiency and speed of data retrieval operations. Without indexes, MongoDB must perform a collection scan, which means it has to look through every single document in a collection to find the data that matches a query.

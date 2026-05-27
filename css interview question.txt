@@ -1312,7 +1312,7 @@ grid-auto-flow: column;: Instead of manually setting up columns for every single
 Ans- To create a horizontal navbar using inline-block, you must change the display property of the list items (<li>) from their default block behavior to inline-block. This allows them to sit side-by-side while still respecting padding and width properties.
 
 29.) grid vs flex.
-Ans-  The fundamental difference is that CSS Flexbox is a one-dimensional layout system, while CSS Grid is a two-dimensional layout system
+Ans-  The fundamental difference is that CSS Flexbox is a one-dimensional layout system, while CSS Grid is a two-dimensional layout system.
 
 30.) what is float and clearfix?
 Ans- What is Float?
@@ -1553,8 +1553,11 @@ Ans-
 Ans-
 57.) what is  visibility: hidden?
 Ans-
-58.) diff b/w display: none and visibility:hidden?
-Ans-
+58.) what is diff b/w display: none and visibility:hidden?
+Ans- The main difference between display: none and visibility: hidden is how they affect the layout of a webpage.
+display: none: Completely removes the element from the document flow. It is as if the element does not exist; it takes up no space, and other elements shift to fill the gap.
+visibility: hidden: Hides the element but preserves its space in the layout. The element becomes invisible (like a transparent box), but surrounding elements stay in their original positions.
+
 59.) what is word-wrap?
 Ans-
 60.) what is box model?
@@ -1563,9 +1566,39 @@ Ans-
 62.) What is Column layout and give different properties 
 63.) What are diff background properties available 
 64.) What is specificity
-65.) Css positions 
-66.) Absolute and relative 
-67.) Sticky and fixed 
-68.) How to test wether page is responsive or not
+65.) What is Css positioning?
+Ans-The CSS positioning property defines how an element is placed in a document. By default, every element has a static position, meaning it follows the natural flow of the page.Once a position is set (to anything other than static), you can use the offset properties—top, right, bottom, and left—to move the element.
+
+static (Default): The element follows the normal document flow. The top, bottom, left, and right properties have no effect.
 
 
+relative: The element is positioned relative to its original normal position. Using offsets will "nudge" it without affecting the space it originally occupied; other elements won't move to fill the gap.
+
+absolute: The element is removed from the normal document flow and positioned relative to its nearest positioned ancestor (the closest parent with a position other than static). If no such ancestor exists, it uses the document body.
+
+fixed: The element is removed from the flow and positioned relative to the viewport (the browser window). It stays in the same spot even when the page is scrolled.
+
+sticky: The element acts like relative until the user scrolls to a specific threshold, at which point it "sticks" and behaves like fixed within its parent container.
+
+66.) what is diff b/w Absolute and relative?
+Ans-The core difference is that absolute is fixed, independent, and stands on its own, whereas relative is dependent, changing, and based on a comparison or a specific context.
+
+67.) what is diff b/w Sticky and fixed?
+Ans-The core difference is that a fixed element is always pinned to the browser window and never moves when you scroll, whereas a sticky element scrolls with the page until it hits a specific trigger point, at which point it pins in place.
+
+68.) How to test whether page is responsive or not?
+Ans-Toggle Device Toolbar
+
+69.)What is diff b/w pseudo classes and pseudo elements?
+Ans-In CSS, pseudo-classes style an existing element based on its state (e.g., hovered, first child), while pseudo-elements style a specific part of an element or insert entirely new virtual content (e.g., the first letter, or content added "before" an element).
+
+70.)in css selector which have least priority?
+Ans-      Selector Type      Example         Specificity Score  
+      Universal Selector        *                  0
+      Type Selector           div, p, h1           1
+      Class Selector          .container           10
+      ID Selector             #header              100
+      Inline Style            style="..."          1000
+
+71.)what is diff b/w border and outline?
+Ans-The outline is always drawn outside the border edge. If an element has both, the border sits directly against the content/padding, while the outline wraps around that border.

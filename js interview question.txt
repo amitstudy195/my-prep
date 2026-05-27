@@ -4,30 +4,23 @@ Key Characteristics of JavaScript:Client-Side and Server-Side: Originally, it wa
 
 2.)what is diff b/w javascript and typescript?
 Ans- The main difference between JavaScript and TypeScript is that TypeScript is a "superset" of JavaScript that adds static typing. While JavaScript determines variable types while the program is running (dynamic typing), TypeScript allows you to define types upfront and catches errors while you are still writing the code (static typing).
-
+ 
 3.)diff var, let and const?
-Ans- 1. Scope (Where does the variable live?)
+Ans- Variable is a container used to store the data....
+ re-declaration is allowed in var
+ re-assignment is allowed in var
+ var is not the block scope 
+ incase of var we can able to access outside of the block
+ var is function scope 
 
-var is Function Scoped: If you create a var inside a simple if statement or a for loop, it "leaks" out and can be accessed outside of that block. This caused a lot of bugs in older JavaScript!
+ in let re-declaration is not possible in the same scope
+ in let, re-assignment is possible
+ let is the block scope
 
-let and const are Block Scoped: They are trapped inside the nearest set of curly braces {}. If you declare them inside an if statement, they do not exist outside of it. This is much safer and more predictable.
+const....redeclaration is not possible
+const ..... reassingment is not possible
+const ...declaration and assignment should happen in the same line
 
-2. Updating and Redeclaring
-
-var lets you do whatever you want. You can redeclare the exact same variable twice, and JavaScript won't complain.
-
-let allows you to update its value later (reassignment), but you cannot declare a variable with the same name twice in the same scope.
-
-const stands for constant. Once you assign a value to it, you cannot reassign it to something else.
-
-Pro-Tip (Interviewer Trap!): If you make an array or an object using const, you can still push new items into the array or change the object's properties. You just can't reassign the variable to a completely new array or object.
-
-3. Hoisting (The weird part)
-All three are technically moved to the top of the file before the code runs (Hoisting).
-
-If you try to console.log a var before you declare it, it will just say undefined.
-
-If you try to console.log a let or const before you declare it, the app will throw a ReferenceError and crash. They are stuck in what JavaScript calls the "Temporal Dead Zone" until the code reaches the line where they are actually defined.
 
 4.)what are the main advantage of js over python and java?
 Ans- JavaScript is the only programming language that runs natively inside every single web browser in the world. If you want to build a dynamic, interactive frontend for a website, you have to use JavaScript (or a language like TypeScript that compiles down to JavaScript). Python and Java simply cannot run directly in the browser the way JS does.
@@ -54,15 +47,194 @@ Summary
 To wrap it up: You choose Python for Data Science, you choose Java for massive, heavy-duty enterprise banking backends, but you choose JavaScript because it rules the web, allows for rapid development, and lets you build an entire full-stack application with a single language.
 
 5.)what are diff data types of js?
-Ans- 
+Ans- data type tells javascript what kind of value is stored in the given variable.
+in javascript data types are divided into two categories 
+
+// 1) Primitive data types 
+     it is immutable
+// a)  Number: used for intergers and floating point numbers
+
+// let a = 100;
+// let b = 100.5
+// console.log(typeof a, typeof b)
+
+
+
+// b) string -> used to store the text...
+//we can use either single quotes '  ' 
+//we can use double quotes " "
+// `    `
+
+// let name = "venkat";
+// let firstName = 'rama';
+// console.log(typeof name, typeof firstName)
+
+
+// c) boolean...only two values.. either true or false
+
+// let isLoggedin = true;
+// let hasPaid = false;
+
+// console.log(typeof isLoggedin, typeof hasPaid)
+
+
+// d) undefined... declared the variable but not assigned the value
+
+// let y;
+// console.log(typeof y)
+
+// // e) null....absence of the value
+
+// let user = null;
+// console.log(typeof user); //object
+
+
+//f) symbol...A symbol represents a unique and immutable identifier, which is often used for object properties to avoid naming conflicts.
+
+g)bigint...it is used for very large integers that exceeds the limit of the number data type. Bigint values are created by appending n to the end of an integer.
+
+// 2) non Primitive data types / reference data types
+    it is mutable
+// a) object -> stores key - value pair
+
+// let person = { //curly bracket
+//     name: "venkat",
+//     city : {
+//         pincode: "523155",
+//         street: "main road"
+//     }
+// };
+
+// console.log(person.name)
+// console.log(person.city.street)
+
+
+// b) array ... used to store group of values [] (square bracket)
+
+// let arr = [1, 2, 3, 4, 5]
+
+// c) function
+
+//function defintion : // function is reusable block of code that perform specific task
+// using function we can avoid duplicate code and it is very useful for the reusability purpose
+ 
+//one function...
+// function welcome() {
+//     console.log("venkat");
+//     console.log("ravi");
+//     console.log("shiva");
+//     console.log("ramaaaa")
+// }
+
+// function call
+// welcome()
+
+
 6.)what are primitive data types?
-Ans- 
+Ans- // 1) Primitive data types :- A primitive data type is the most basic, pre-defined data type provided by a programming language, representing a single, immutable raw value. They are foundational building blocks, such as integers, booleans, and characters, which are stored directly in memory (stack) for high performance, rather than as objects.
+     it is immutable
+// a)  Number: used for intergers and floating point numbers
+
+// let a = 100;
+// let b = 100.5
+// console.log(typeof a, typeof b)
+
+
+
+// b) string -> used to store the text...
+//we can use either single quotes '  ' 
+//we can use double quotes " "
+// `    `
+
+// let name = "venkat";
+// let firstName = 'rama';
+// console.log(typeof name, typeof firstName)
+
+
+// c) boolean...only two values.. either true or false
+
+// let isLoggedin = true;
+// let hasPaid = false;
+
+// console.log(typeof isLoggedin, typeof hasPaid)
+
+
+// d) undefined... declared the variable but not assigned the value
+
+// let y;
+// console.log(typeof y)
+
+// // e) null....absence of the value
+
+// let user = null;
+// console.log(typeof user); //object
+
+
+//f) symbol...A symbol represents a unique and immutable identifier, which is often used for object properties to avoid naming conflicts.
+
+g)bigint...it is used for very large integers that exceeds the limit of the number data type. Bigint values are created by appending n to the end of an integer.
+
 7.)what are non primitive data types or reference data types?
-Ans- 
+Ans- // 2) non Primitive data types / reference data types:- Non-primitive or reference data types are user-defined data types that store references (memory addresses) to objects rather than the actual values, created by programmers to handle complex data.
+
+// a) object -> stores key - value pair
+
+// let person = { //curly bracket
+//     name: "venkat",
+//     city : {
+//         pincode: "523155",
+//         street: "main road"
+//     }
+// };
+
+// console.log(person.name)
+// console.log(person.city.street)
+
+
+// b) array ... used to store group of values [] (square bracket)
+
+// let arr = [1, 2, 3, 4, 5]
+
+// c) function
+
+//function defintion : // function is reusable block of code that perform specific task
+// using function we can avoid duplicate code and it is very useful for the reusability purpose
+
+//one function...
+// function welcome() {
+//     console.log("venkat");
+//     console.log("ravi");
+//     console.log("shiva");
+//     console.log("ramaaaa")
+// }
+
+// function call
+// welcome()
+
 8.)diff b/w copy by value and copy by reference?
-Ans- 
+Ans- // copy by value ...memory is fixed...memory will be allocated(primitive data type)
+
+let a = 10; //a = 10
+let b = a; // b = 10
+
+b = 20; 
+
+console.log(a); //10
+console.log(b); //20
+
+
+// copy by reference  (non-primitive)
+
+let person1 = {name: "venkat"};
+let person2 = person1;
+
+person2.name = "rama";
+
+console.log(person1.name) ; //rama
+console.log(person2.name) // rama
+
 9.)how to debug js in browser?
-Ans- Gemini said
+Ans-
 Debugging JavaScript directly in the browser is primarily done using Browser DevTools (F12 or Right-click > Inspect). It is much more powerful than using console.log() because it allows you to pause time and inspect the "live" state of your code.
 
 1. The Console (The Basics)
@@ -100,7 +272,7 @@ While the code is paused, you can see exactly what every variable equals at that
 
 Hover: Hover your mouse over any variable in the code editor to see its current value.
 
-Scope Pane: Look at the "Scope" section on the right to see all Local and Global variables currently in memory.
+Scope Panel: Look at the "Scope" section on the right to see all Local and Global variables currently in memory.
 
 Watch: Add specific variables to the "Watch" list to track how they change as you step through the code.
 
@@ -124,107 +296,583 @@ Check the Payload (what you sent) and the Response (what the server sent back).
 
 10.)can we javascript in the browser and outside the browser?
 Ans- 1. Inside the Browser (Client-Side)In the browser, JavaScript is used to make websites interactive. The browser provides a specific set of APIs that allow the code to talk to the webpage and the user.The Engine: Every browser has its own (Chrome uses V8, Firefox uses SpiderMonkey, Safari uses JavaScriptCore).Unique Powers:The DOM: You can manipulate HTML elements (change colors, move buttons).The Window Object: You can control browser-specific features like alerts, local storage, and the URL bar.User Events: You can listen for clicks, scrolls, and mouse movements.Limitations: For security, browser JS cannot access your computer's files directly or manage your hardware.2. Outside the Browser (Server-Side / Desktop)To run JavaScript outside the browser, you use a "Runtime" like Node.js, Deno, or Bun. These programs take the same engine used in browsers (usually V8) and wrap it in a different set of tools.The Runtime: Most commonly Node.js.Unique Powers:File System: You can read, write, and delete files on your hard drive.Networking: You can build your own web servers (like Express) to handle database requests.OS Access: You can check CPU usage, memory, and interact with the operating system.Limitations: There is no "Window" or "Document." If you try to run document.getElementById() in Node.js, it will throw an error because there is no webpage to look at.
-11.)what is v8  engine
-12.)how to declare variable in js
-13.)what is typeof operator
-14.)what is instanceof operator
-15.)what is diff b/w == and ===(eqality)
-16.)what is diff b/w null and undefined
-17.)what is event bubbling
-18.)what is event propagation
-19.)what is diff b/w map and set
-20.)what is diff b/w map,set, weakmap, and weakset
-what is the use of preventdefault
-how to stop the default behaviour of form when we submit
-what is function
-how to define the function , call the function
-what is named function
-what is function expression
-what is function declaration
-what is arrow function
-what is anonymous function
-what is IIFE function
-what is recursive function
-what is high order function
-what is closure
-what is inheritance
-what is object.prototype
-how to add new property to the existing object in js
-what is this keyword
-what are diff scopes in js 
-what is global scope, local scope, function scope, lexical scope
-what is local storage
-what is session storage
-what is cookie
-diff b/w local storage and session storage
-what is hoisting and its usage
-what is use strict
-what is diff b/w normal function and arrow function 
-what is es6 latest feature
-what is destructuring
-what is object destructuring and array destructuring
-what is optional chaining operator
-what is nullish coaleshing operator 
-what is ternary operator 
-what is event loop
-diff js events
-what is diff ways of adding events in js 
-what is DOM and explain in detail
-how to add the class, remove the class, add the style, remove the style using
-what is toggle in DOM
-how to create the element using DOM
-diff b/w append and appendchild
-what are template literals
-what are the default parameters in functions
-what is rest operator
-what is spread operator
-diff b/w rest and spread
-what is settimeout
-what is setInterval
-diff b/w settimeout vs setInterval
-what is synchronous
-what is asynchronous
-diff b/w sync and async
-what is callback and give the explanation
-what is callback hell
-what is promise
-what is promise chaining
-diff promise methods, promise.all, promise.any, promise.race
-what is async/await
-what is fetch
-what is for loop, 
-what is for....in
-what is for....of 
-what is foreach
-diff b/w for....in and for....of 
-what are conditions in js 
-what is if, if else and else if 
-what is switch
-what is "this" keyword in js 
-what is BOM
-what is super key in js 
-what is JSON.stringfy
-what is JSON.parse 
-diff b/w json.stringfy and json.parse 
-what is queryselector
-what is queryselectorall
-diff b/w queryselector and queryselectorall
-what is document.getElementById
-what is document.getElementByClassName
-what is document.getElementByTagName
-what is pure function
-what is impure function
-diff pure and impure function
-what is regex
-what is js modules
-how js works behind the screen
-how do we debounce a function in js
-how do we throttle a function in js
-what is error handling in js 
-how to handle the errors in js 
-what is try, catch, finally, throw in error handling 
-what is JSON 
-how to clone an object 
+
+11.)what is v8  engine?
+Ans: 
+12.)how to declare variable in js?
+Ans: 
+13.)what is typeof operator?
+Ans: it determines the data type of a given value or a variable and returns a string.
+ 
+14.)what is instanceof operator?
+Ans: The instanceof operator is a comparison operator used in several programming languages—most notably Java and JavaScript—to check if an object is an instance of a specific class, subclass, or interface at runtime.
+let arr = [1, 2, 3];
+console.log(arr instanceof Array);  // true
+console.log(arr instanceof Object); // true
+
+15.)what is diff b/w == and ===(eqality)?
+Ans: Double equal to is known as an equality operator and triple equal to is known as the strict eqality operator. The difference arises because double equal to perform type coercion which converts the string. triple equal does not perform type coercion.
+
+16.)what is diff b/w null and undefined?
+Ans: null and undefined both indicates absence of value on one hand undefined is use when variable is declared but has not be assign a value, on the other hand null is the intentional absence of any value if you don't want to assign any value to a variable because either you might assign it later or you just want to leave it empty, 
+let b= null;
+console.log(b);
+
+17.)what is event bubbling?
+Ans: A propagation model where events are handled from the innermost element to the outermost element.
+ex- <div id="topDiv"> Outer Div
+<div id="midDiv"> Mid Div
+<div id="innerDiv">
+ Inner Div 
+</div>
+</div></div>
+
+<script>
+document.getElementById("topDiv").addEventListener("click", () => {
+    console.log("Outer div has been clicked");
+})
+document.getElementById("midDiv").addEventListener("click", () => {
+    console.log("middle div has been clicked");
+})
+document.getElementById("innerDiv").addEventListener("click", () => {
+    console.log("inner div has been clicked");
+})
+</script>
+18.)what is event capturing?
+Ans: A propagation model where events are handled from the outermost element to the innermost element.
+ex- <div id="topDiv"> Outer Div
+<div id="midDiv"> Mid Div
+<div id="innerDiv">
+ Inner Div 
+</div>
+</div></div>
+
+<script>
+document.getElementById("topDiv").addEventListener("click", () => {
+    console.log("Outer div has been clicked");
+},true)
+document.getElementById("midDiv").addEventListener("click", () => {
+    console.log("middle div has been clicked");
+},true)
+document.getElementById("innerDiv").addEventListener("click", () => {
+    console.log("inner div has been clicked");
+},true)
+</script>
+18.)what is event propagation?
+Ans: Event Propagation defines the order in which event handlers are triggered when an event occurs in the DOM. In HTML and React, this behavior is handled using two main mechanisms: Event Bubbling and Event Capturing.
+
+19.)what is the purpose of the Map Method in JavaScript?
+Ans: The map() method in javascript is used to create a new array by applying a specified function to each element in an existing array.
+ 
+ const numbers = [2,3,4,5,6];
+ const double = numbers.map(num => num * 2);
+
+ console.log(numbers)
+ console.log(double)
+
+19.)what is diff b/w map and set?
+Ans:The primary difference is that a Set is a collection of unique values, while a Map is a collection of key-value pairs.
+
+20.)what is diff b/w map, set, weakmap, and weakset?
+Ans:Map and Set are general-purpose collections with strong references, while WeakMap and WeakSet store weak references to objects, allowing garbage collection. Map stores key-value pairs of any type. Set stores unique values. WeakMap requires object keys and enables memory management, while WeakSet only stores unique objects.
+
+20.)What are weak maps and weak sets in JavaScript?
+Ans:Weak maps:- A WeakMap is a collection of key-value pairs where the required to be objects.
+ex- let WeakMap = new WeakMap();
+let obj = {name: "Adam"};
+
+WeakMap.set(obj, "Employee");
+obj = null;
+console.log(WeakMap.get(obj));
+
+Weak sets:- A collection of unique object references that only stores objects and does not allow any primitives.
+ex- let WeakSet = new WeakSet();
+let obj = {name: "Adam"};
+
+WeakSet.add(obj, "Employee");
+obj = null;
+console.log(WeakSet.has(obj));
+
+Both WeakMap and WeakSet are non-iterable, have no size property, and are ideal for temporary data storage and memory-efficient management of objects.
+21.)what is the use of preventdefault?
+Ans:The event.preventDefault() method is used in JavaScript to stop the browser from executing its default action for a specific event.
+
+22.)how to stop the default behaviour of form when we submit?
+Ans:The standard and most recommended method is using event.preventDefault().
+
+23.)what is function?
+Ans:// function is reusable block of code that perform specific task
+// using function we can avoid duplicate code and it is very useful for the reusability purpose
+
+24.)how to define the function , call the function?
+Ans:// function welcome() {
+//     console.log("venkat");
+//     console.log("ravi");
+//     console.log("shiva");
+//     console.log("ramaaaa")
+// }
+
+// function call
+// welcome()
+
+25.)what is named function?
+Ans:A function declared using function and with function name
+// function calculteTotal(price,qty){
+//     return price*qty
+// }
+// console.log(calculteTotal(100,2));
+
+26.)what is function expression?
+Ans:// function expression ...function stored inside the variable
+
+// const calculateTax1=function(amount){
+//     return amount*0.18
+// }
+// console.log(calculateTax1(1000));
+
+27.)what is function declaration?
+Ans:
+28.)what is arrow function?
+Ans:In JavaScript, an arrow function is a compact alternative to traditional function expressions, introduced in ES6 (2015). It uses the "fat arrow" syntax (=>) to provide a more streamlined way to write functions, making code cleaner and more readable.
+function(a, b) { return a + b; }(a, b) => a + b;
+
+29.)what is anonymous function?
+Ans:anonymous function: function without name
+
+// const calculateTax3 = function(amount){
+//     return amount*0.18
+// }
+// console.log(calculateTax3(1000));
+
+30.)what is IIFE function?
+Ans:An immediately invoked function expression is a javascript function that is defined and executed immediately after it's created.
+(function (){ 
+    console.log("hello world");
+})();
+
+31.)what is recursive function?
+Ans:A recursive function is a programming technique where a function calls itself, directly or indirectly, to solve a problem by breaking it down into smaller, self-similar sub-problems. It requires a base case to terminate the recursion and a recursive case to move toward that base case. 
+
+32.)what is higher order function?
+Ans:Higher order functions are functions that can either take other functions as arguments or return a function as a result.
+
+ex- const numbers = [1,2,3,4,5,6];
+
+const double = numbers.map(function(num){
+    return num*2;
+})
+33.)what is closure?
+Ans:In javascript a closure is a function that remembers the environment in which it was created even after the outer function has finished executing.
+
+function outerFunction(){
+    let outerVar = "This is from the outside!"
+
+    function innerFunction(){
+        console.log(outerVar);
+    }
+    return innerFunction;
+}
+
+const closureFunction = outerFunction();
+closureFunction();
+
+34.)what is inheritance?
+Ans:
+35.)what is object.prototype?
+Ans:
+36.)how to add new property to the existing object in js?
+Ans:
+37.)what is this keyword?
+Ans:
+38.)what are diff scopes in js?
+Ans: 
+39.)what is global scope, local scope, function scope, lexical scope?
+Ans:
+40.)what is local storage?
+Ans:
+41.)what is session storage?
+Ans:
+42.)what is cookie?
+Ans:
+43.)diff b/w local storage and session storage?
+Ans:
+44.)what is hoisting and its usage?
+Ans:hoisting in js where variable declaration and function declaration are moved to the top of the containing scope automatically
+Variable Hoisting (var): Declarations using var are hoisted and initialized as undefined.
+Variable Hoisting (let/const): Declarations are hoisted but not initialized, residing in a "Temporal Dead Zone" until defined, causing a reference error if accessed early.
+
+console.log(name); // Output: undefined
+var name = "Alice";
+//it will work in function declaration
+function declaration will be hoisted automatically
+greet(); // Output: "Hello!"
+function greet() {
+    console.log("Hello!");
+}
+// function expression: assigning the function to the variable
+// function expression are not hoisted
+sayHi(); // TypeError: sayHi is not a function
+var sayHi = function() {
+    console.log("Hi!");
+}; 
+
+45.)what is use strict, and how is it enabled?
+Ans: it enforces various rules to make your code cleaner and more secure.
+
+46.)what is diff b/w normal function and arrow function?
+Ans: Arrow functions provide a shorter, more concise syntax compared to normal functions. The most critical difference is how they handle the this keyword: normal functions have a dynamic this that changes based on how they are called, while arrow functions inherit this lexically from their surrounding scope.
+
+47.)what is es6 latest feature?
+Ans:
+48.)what is destructuring?
+Ans:// destructuring in js allows us to extract values from objects or arrays and assign them to variables in the single line
+
+// before
+const arr = [1,2,3,4,5,6];
+
+// const one = arr[0];
+// const two = arr[1];
+// const three = arr[2];
+// const four = arr[3];
+// const five = arr[4];
+// const one = arr[0];
+
+// with destructuring
+const [one, two, three, four, five] = arr;
+
+console.log(one, two, three, four, five);
+
+49.)what is object destructuring and array destructuring?
+Ans:
+50.)what is optional chaining operator?
+Ans:
+51.)what is nullish coaleshing operator?
+Ans: 
+52.)what is ternary operator?
+Ans: 
+53.)what is event loop?
+Ans:The event loop is a continuously running process in JavaScript runtimes (like browsers and Node.js) that enables asynchronous, non-blocking behavior despite JavaScript being single-threaded. It constantly checks if the call stack is empty, then moves tasks from the callback queue to the stack for execution.
+
+54.)diff js events?
+Ans:
+55.)what is diff ways of adding events in js?
+Ans: 
+56.)what is DOM and explain in detail?
+Ans:
+57.)how to add the class, remove the class, add the style, remove the style using?
+Ans:
+58.)what is toggle in DOM?
+Ans:
+59.)how to create the element using DOM?
+Ans:
+60.)diff b/w append and appendchild?
+Ans:
+61.)what are template literals?
+Ans: Template literals (also called template strings) are a flexible way to work with strings in JavaScript using backticks (`), $ sign, and curly bracket  instead of standard single or double quotes. Introduced in ES6, they simplify common tasks like combining variables with text and creating multi-line strings.
+
+62.)what are the default parameters in functions?
+Ans:
+63.)what is rest operator?
+Ans:// Rest operator (...) is used to collect multiple elements into the single array or object in the function parameters
+
+function add(a, b, c){
+    return a+b+c 
+}
+
+console.log(add(10, 20, 30, 40, 50, 60, 70));
+
+//with restOperator
+function add(...numbers){
+    let sum = 0;
+    for(let i=0; i<numbers.length; i++){
+        sum+=numbers[i]
+    }
+    return sum
+}
+
+console.log(add(10, 20, 30));
+console.log(add(10, 20, 30, 40, 50, 60));
+
+64.)what is spread operator?
+Ans:// spread operator(...) is used to expand elements of an array, object into individual elements
+
+// /copy array or objects
+// merging arrays or objects
+// adding or updating values without modifying original data
 
 
+// before spread (without spread)
 
+const arr1 = [1,2,3,4,5]; //array is the reference data type.. refer same memory
+
+// const arr2 = arr1; //[1,2,3,4,5];
+
+// spread operator
+const arr2 = [...arr1]
+
+arr2.push(1000); //[1,2,3,4,5,1000]
+
+console.log(arr1);
+console.log(arr2);
+
+65.)diff b/w rest and spread?
+Ans:
+66.)what is settimeout?
+Ans:setTimeout is a built-in JavaScript function used to schedule the execution of a function after a specified delay. It allows you to run code once after a period of time has passed, rather than executing it immediately.
+
+67.)what is setInterval?
+Ans:setInterval is a built-in JavaScript method used to repeatedly execute a specific function or code snippet at fixed time intervals. It is a core part of JavaScript timing events and is commonly used for tasks that require periodic updates, such as digital clocks, animations, or real-time data polling.
+
+68.)diff b/w settimeout vs setInterval?
+Ans:The primary difference between setTimeout and setInterval is how many times they execute code: setTimeout runs it once after a delay, while setInterval runs it repeatedly at fixed intervals.
+
+69.)what is synchronous?
+Ans:
+70.)what is asynchronous?
+Ans:
+71.)diff b/w sync and async?
+Ans:
+72.)what is callback and give the explanation?
+Ans:
+73.)what is callback hell?
+Ans:
+74.)what is promise?
+Ans:Promise handle asynchronous tasks in JavaScript by providing a more readable and structured approach than callbacks for handling outputs.
+pending       fullfilled         rejected
+
+const data = {name:"John", age:30};
+
+function fetchData(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve(data);
+        }, 2000);
+    })
+}
+
+fetchData().then(
+    data => {
+        console.log("Data: ", data);
+    }).catch(err => {
+        console.log("Error: ", err);
+    })
+
+75.)what is promise chaining?
+Ans:
+76.)diff promise methods, promise.all, promise.any, promise.race?
+Ans:
+77.)what is async/await?
+Ans:async - Declaring a function with async makes it return a promise
+
+await - it pauses the execution of the code until the promise it's waiting for is resolved, then returns the resolved value 
+
+async function fetchData(){
+    try{
+        const response = await fetch ("https://jsonplceholder.typicode.co");
+
+        const data = await response.json();
+        console.log("Data fetched!", data);
+
+    } catch(err){
+        console.log("Error: ", err);
+    }
+}
+
+78.)what is fetch?
+Ans:
+79.)what is for loop?
+Ans: 
+80.)what is for....in?
+Ans:
+81.)what is for....of?
+Ans: 
+82.)what is foreach?
+Ans:
+83.)diff b/w for....in and for....of?
+Ans: 
+84.)what are conditions in js?
+Ans: 
+85.)what is if, if else and else if?
+Ans: 
+86.)what is switch?
+Ans:
+87.)what is "this" keyword in js?
+Ans: 
+88.)what is BOM?
+Ans:
+89.)what is super key in js?
+Ans: 
+90.)what is JSON.stringfy?
+Ans:
+91.)what is JSON.parse?
+Ans: 
+92.)diff b/w json.stringfy and json.parse?
+Ans: 
+93.)what is queryselector?
+Ans:
+94.)what is queryselectorall?
+Ans:
+95.)diff b/w queryselector and queryselectorall?
+Ans:
+96.)what is document.getElementById?
+Ans:
+97.)what is document.getElementByClassName?
+Ans:
+98.)what is document.getElementByTagName?
+Ans:
+99.)what is pure function?
+Ans:
+100.)what is impure function?
+Ans:
+101.)diff pure and impure function?
+Ans:
+102.)what is regex?
+Ans:
+103.)what is js modules?
+Ans:
+104.)how js works behind the screen?
+Ans:
+105.)how do we debounce a function in js?
+Ans:
+106.)how do we throttle a function in js?
+Ans:
+107.)what is error handling in js?
+Ans: 
+108.)how to handle the errors in js?
+Ans: 
+109.)what is try, catch, finally, throw in error handling?
+Ans: 
+110.)what is JSON?
+Ans: 
+111.)how to clone an object?
+Ans: 
+112.)What is event delegation?
+Ans: A technique that allows you to manage events for multiple elements more efficiently by using a single event listener on a common parent element rather than on each individual child element.
+
+<div class="box">
+<ul id="itemList">
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+</ul>
+</div>
+<script>
+const items = document.getElementById('itemList');
+items.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        console.log("Clicked: ", e.target.textContent);
+    }
+})
+<script/>
+
+113.)What is call, apply and bind?
+Ans:Call- invokes the function immediately, with this set to thisArg, and accepts arguments one by one.
+
+ex- function cook(ing1, ing2, ing3){
+    console.log(`${this.name} is having a meal with ${ing1}, ${ing2} and ${ing3}`);
+}
+const adam = {name:"Adam"};
+cook.call(adam, "rice", "beans", "water");
+
+Apply-invokes the function immediately, with this set to thisArg, but takes arguments as an array
+
+ex- function cook(ing1, ing2, ing3){
+    console.log(`${this.name} is having a meal with ${ing1}, ${ing2} and ${ing3}`);
+}
+const adam = {name:"Adam"};
+cook.apply(adam, ["rice", "beans","water"])
+
+Bind- Return a new function with this set to thisArg, and any preset arguments, but doesn't invoke it immediately.
+
+ex- function cook(ing1, ing2, ing3){
+    console.log(`${this.name} is having a meal with ${ing1}, ${ing2} and ${ing3}`);
+}
+const adam = {name:"Adam"};
+
+const cookForAdam = cook.bind(adam, "rice", "beans","water");
+
+// cookForAdam();
+
+114.)What is the difference between a promise and an async/await function?
+Ans- Promises and async/await are both used to handle asynchronous operations in JavaScript, but async/await is a cleaner, more readable syntax built on top of Promises. While Promises use .then() chaining, async/await allows asynchronous code to look and act like synchronous code, improving maintainability for complex operations.
+
+
+115.)Describe the purpose of the reduce method in arrays.
+Ans: The reduce() method in JavaScript is used to reduce an array to a single value by applying a function on each element in the array.
+
+const numbers = [1,2,3,4,5];
+
+const sum = numbers.reduce((accumulator, currentVal)=>{
+    return accumulator + currentVal;
+}, 10)
+
+console.log(sum)
+
+116.)Explain the concept of Currying in JavaScript.
+Ans: Currying is a concept in functional programming where a function that takes multiple arguments is transformed into a sequence of functions, each accepting a single argument.
+Currying is used because it makes your code more flexible and reusable.
+
+function double(a){
+    return function(b){
+        return a*b;
+    }
+}
+
+const double2 = double(2);
+
+console.log(double2(3));
+console.log(double2(5));
+
+117.)What is a Generator function, and how is it used?
+Ans:A generator function in JavaScript is a special type of function that can pause its execution and resume it later.
+
+function* infiniteSequence(){
+    let num = 1;
+    while(true){
+        yield num;
+        num++;
+    }
+}
+
+const seq = infiniteSequence();
+
+for(let i=0; i<10; i++)
+console.log(seq.next().value);
+
+118.) How does javascript handle memory management?
+Ans: JavaScript handles memory management automatically using a process called garbage collection.
+
+JavaScript uses two primary structures to organize memory:
+Stack: Used for static data with a fixed size, such as primitive types (numbers, strings, booleans) and function call frames.
+Heap: Used for dynamic data whose size may change, including objects, arrays, and functions
+
+Modern engines (like Chrome's V8) primarily use the Mark-and-Sweep algorithm to determine what to delete.
+
+119.) Describe the difference between Shallow and Deep copying.
+Ans: Shallow copying: in the shallow copy of an object, the main properties are copied, but any nested objects or arrays are still linked to the original.
+
+const original = {name:"John", address:{city:"Delhi"}};
+
+//object.assign
+
+const shallowCopy = Object.assign({}, original);
+
+//spread operator
+const shallowCopy2 = {...original};
+
+shallowCopy2.address.city = "New city";
+console.log(original.address.city);
+
+Deep copying: With a deep copy, every part of the object, including all nested objects or arrays, is fully copied, ensuring the modifications to the copy doesn't affect the original.
+
+const original = {name:"John", address:{city:"Delhi"}};
+const deepCopy = JSON.parse(JSON.stringify(original));
+
+deepCopy.address.city = "New city";
+
+console.log(original.address.city);
+
+120.)What is diff b/w map and forEach?
+Ans-The core difference is that map() transforms elements and returns a new array, while forEach() executes an action on each element and returns nothing (undefined).
+
+121.) 

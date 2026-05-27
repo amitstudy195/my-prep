@@ -1,0 +1,49 @@
+1.)what is key performance metrics in node js?
+Ans- Key performance metrics in Node.js are essential for ensuring your application remains responsive, especially since it operates on a single-threaded event loop.
+
+2.)what is worker thread. when should we use it?
+Ans- In Node.js, a Worker Thread is a feature provided by the built-in node:worker_threads module that allows you to execute JavaScript code in parallel on separate CPU cores.
+You should use worker threads specifically for CPU-bound operations. They are designed to process heavy, synchronous computations without freezing the main application.
+
+3.)what is cluster mode in node js?
+Ans- In Node.js, Cluster Mode is a built-in feature that allows you to spawn multiple instances of your application (called "workers") to take advantage of multi-core CPUs. Because Node.js is single-threaded by default, it typically only uses one CPU core; the Cluster module enables horizontal scaling on a single machine by distributing incoming connections across multiple worker processes.
+
+4.)how can we improve the scalability of node js?
+Ans- Improving the scalability of Node.js requires a multi-layered approach that addresses its single-threaded nature and optimizes resource utilization across the stack.
+1. Optimize Internal Performance
+Before scaling outward, ensure your code is running as efficiently as possible within a single instance.
+Use Asynchronous Non-blocking I/O: Always prefer asynchronous methods (Promises, async/await) to prevent blocking the event loop.
+Stream Large Data: Use Node.js Streams to process large datasets (like files or database exports) in chunks rather than loading everything into memory.
+Optimize Garbage Collection: Monitor for memory leaks using tools like Chrome DevTools or Clinic.js and increase heap limits with the --max-old-space-size flag if necessary.
+2. Vertical Scaling (Cloning on One Machine)
+Node.js runs on a single CPU core by default. To utilize modern multi-core processors, you must "clone" your application.
+Cluster Module: Use the built-in Cluster module to spawn worker processes that share the same server port.
+Process Managers: Use PM2 to automate clustering, monitor resource usage, and enable zero-downtime restarts.
+3. Horizontal Scaling (Scaling Across Multiple Servers)
+Distributing the load across multiple machines is essential for handling massive traffic.
+Load Balancing: Use a load balancer like NGINX, HAProxy, or cloud-based solutions (e.g., AWS Elastic Load Balancing) to distribute incoming traffic across several Node.js instances.
+Stateless Architecture: Ensure your application is stateless so any instance can handle any request. Store session data in external, shared memory stores like Redis or Memcached.
+4. Architectural & Infrastructure Improvements
+Changing how your system is structured can remove bottlenecks that code optimization alone cannot fix.
+Microservices: Decompose large monolithic applications into smaller, independent services that communicate via lightweight protocols like HTTP or message brokers (e.g., RabbitMQ).
+Database Optimization: Implement database indexing, connection pooling, and read replicas to prevent the database from becoming a bottleneck.
+Caching Layers: Use Redis to cache frequently accessed data, such as API responses or complex database queries, to reduce server load.
+Reverse Proxies & CDNs: Offload static assets (images, CSS, JS) to a Content Delivery Network (CDN) and use a reverse proxy like NGINX for SSL termination and request compression.
+
+5.)how do you ensure the performance and avoid the memory leaks in node js?
+Ans- To ensure high performance and prevent memory leaks in Node.js, you must focus on non-blocking code execution and rigorous resource lifecycle management.
+Ensuring Performance
+Don't Block the Event Loop: Avoid synchronous functions (like fs.readFileSync) in your main request-response cycle. For CPU-intensive tasks like image processing, offload work to Worker Threads to keep the main thread responsive.
+Implement Caching: Use in-memory stores like Redis to cache frequent database queries or API responses, significantly reducing latency and backend load.
+Leverage Clustering: Since Node.js is single-threaded, use the Cluster module or a process manager like PM2 to spawn multiple instances and utilize all available CPU cores.
+Optimize Data Handling: Use Streams for large files to process data in small chunks instead of loading the entire content into memory at once.
+Parallelize Tasks: Use Promise.all() or the async library to run independent I/O operations simultaneously rather than sequentially.
+Avoiding Memory Leaks
+Clear Timers and Listeners: Always call clearTimeout() or clearInterval() when a timer is no longer needed. Similarly, remove event listeners with emitter.removeListener() to prevent them from indefinitely holding references to objects.
+Minimize Global Variables: Avoid attaching data to the global object, as these remain in memory for the application's entire lifetime.
+Manage Closures Carefully: Be aware that closures can capture and retain large variables from their outer scope even after the outer function finishes execution.
+Use Weak References: For metadata or temporary object associations, use WeakMap or WeakSet, which do not prevent their keys from being garbage collected.
+Profiling and Monitoring:
+Heap Snapshots: Use Chrome DevTools via the --inspect flag to capture heap snapshots and identify which objects are not being garbage collected.
+Memory Usage Tracking: Monitor process.memoryUsage() to identify trends in heap growth over time.
+Diagnostic Tools: Use Node Clinic to automatically diagnose performance bottlenecks and memory issues.

@@ -1150,7 +1150,7 @@ The two most important attributes are src (where the image file is) and alt (a t
 HTML
 <img src="cat.jpg" alt="A cute orange cat sitting on a sofa">
 
-40.) what seo,what precuations we keep in while deveoping seo friendly?
+40.) what seo,what precuations we keep in while developing seo friendly?
 Ans- 
 
 41.) diff form elements in html?
@@ -1374,5 +1374,33 @@ Cleaner Code: Your HTML file stays focused on structure (content), while your CS
 
 Faster Loading: The browser caches (saves) the external CSS file after the first page load, so subsequent pages load faster.
 
+45.)What is image map?
+Ans- An image map is an HTML feature that allows you to create multiple clickable areas, known as "hotspots," within a single image.
 
+<img src="" alt="" usemap="#name">
+<map name="name">
+<area shape="rect" coords="" href="">
 
+46.)what is diff b/w i and em?
+Ans-The difference between emphasis and italic lies in their purpose: italic is a visual styling (how text looks), while emphasis is a semantic meaning (how text should be stressed or understood).
+
+47.)what are empty elements in html?
+Ans-Empty elements, also known as void elements, are HTML elements that cannot have any child nodes (meaning they contain no text or other nested tags). Because they have no content, they consist only of a start tag and do not require a closing tag.
+According to the MDN Web Docs, there are 14 standard void elements in HTML:
+<br>: Inserts a single line break.
+<img>: Embeds an image into the document.
+<hr>: Represents a thematic break (horizontal rule).
+<input>: Defines an input control for web forms.
+<meta>: Provides metadata about the HTML document.
+<link>: Establishes a link to external resources like stylesheets.
+<source>: Specifies multiple media resources for <video>, <audio>, or <picture>.
+<area>, <base>, <col>, <embed>, <param>, <track>, <wbr>.
+
+48.)What is diff b/w figure tag and image tag?
+Ans-The <img> tag is used to embed an actual image into a webpage. The <figure> tag is a semantic container used to group media (like an image, chart, or code snippet) with its caption, making it self-contained.
+
+49.)what is importance of head tag and body tag?
+Ans-The <head> and <body> tags are the two fundamental pillars of an HTML document. The <head> acts as the "brain" of the webpage, storing hidden metadata and background resources, while the <body> is the "visual canvas" containing all the actual content users see and interact with on the screen. 
+
+50.)What is required attribute?
+Ans- The required attribute is a boolean HTML attribute that ensures a user fills out a specific form field before the form can be submitted. If a user tries to submit the form while leaving a required field blank, the browser will display an error pop-up and block the submission.
