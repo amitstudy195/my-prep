@@ -1,0 +1,10 @@
+what is full stack development
+can you explain the client and server communication 
+what is request and response cycle
+how FE and BE communicate 
+what is importance of database 
+what is diff b/w browser js and node js 
+what is v8 engine and its purpose 
+what is FE
+What is BE 
+what is Database

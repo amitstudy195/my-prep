@@ -19,7 +19,7 @@ Key Improvements Over Older Versions
  
 *Native Multimedia: It introduced the <video> and <audio> tags, allowing you to play media directly in the browser without needing third-party plugins like Adobe Flash.
 
-*Better Semantic Tags: Instead of using generic <div> tags for everything, HTML5 uses meaningful tags like <header>, <footer>, <nav>, and <article>. This helps search engines (SEO) and screen readers better understand your page.
+*Better Semantic Tags: Instead of using generic <div> tags for everything, HTML5 uses meaningful tags like <header>, <footer>, <nav>, and <article>. This helps search engines Optimization (SEO) and screen readers better understand your page.
 
 *Graphics and Games: The <canvas> element was added, enabling developers to draw 2D graphics and create complex animations or games using JavaScript.
 
@@ -72,7 +72,7 @@ Use lowercase for all tags and attributes to stay consistent with modern standar
 Always close your tags to avoid unexpected layout bugs and ensure your site works perfectly across all devices and screen readers.
 
 
-5.) what are the importance of meta tag in html?
+5.)what are the importance of meta tag in html?
 Ans- Meta tags are snippets of HTML code that live in the <head> section of a webpage. They provide metadata—hidden information about the page that is not visible to users but is crucial for browsers, search engines, and social platforms. 
 
 1. Search Engine Optimization (SEO)
@@ -100,10 +100,14 @@ Use code with caution.
 
 Why is it essential?
 Mobile Scaling: Without this tag, mobile browsers assume your site is designed for desktop and will try to "zoom out" to fit the whole page on a small screen. This makes text tiny and unreadable.
+
 Enabling Responsive Design: The width=device-width property tells the browser to set the page's width to match the actual width of the screen. This allows your CSS Media Queries to work correctly so that your layout can change based on the device.
+
 Controlling Zoom: The initial-scale=1.0 setting ensures that when the page first loads, it is at a 1:1 scale (no zoom).
 SEO Benefits: Search engines like Google prioritize mobile-friendly websites in their rankings. A site without a properly configured viewport is often flagged as "not mobile-friendly".
+
 Fixing Tap Delays: On some older mobile browsers, not having a viewport tag can cause a 300ms delay on every tap as the browser waits to see if you are double-tapping to zoom. 
+
 Key Attributes
 width: Sets the width of the viewport (usually set to device-width).
 initial-scale: Controls the zoom level on the first load.
@@ -131,7 +135,7 @@ These provide information to browsers and search engines.
 <meta name="viewport">: Essential for mobile responsiveness; it controls how the page scales on different screens.
 <link>: Connects external files, most commonly CSS stylesheets.
 <script>: Used to embed or link JavaScript for interactivity. 
-3. New HTML5 Semantic Tags
+3.Semantic Tags
 These tags provide meaning to the structure, replacing generic <div> tags for better SEO and accessibility. 
 <header> & <footer>: Define the top (intro/logo) and bottom (copyright/links) sections.
 <nav>: Specifically for navigation links (menus).
@@ -139,7 +143,7 @@ These tags provide meaning to the structure, replacing generic <div> tags for be
 <section> & <article>: Group related content or define independent, reusable posts.
 <aside>: For sidebars or content tangentially related to the main text.
 <figure> & <figcaption>: Group an image or illustration with its caption. 
-4. Multimedia & Graphics (HTML5 Features)
+4. Multimedia & Graphics Tags
 Tags that allow the browser to handle media natively without plugins. 
 <video> & <audio>: Embed movie clips or sound files directly.
 <canvas>: A scriptable area used to draw 2D graphics and games via JavaScript.
@@ -153,7 +157,7 @@ Tags that allow the browser to handle media natively without plugins.
 <div> & <span>: Generic containers for grouping elements or styling parts of text. 
 
 
-9.) what is diff class and id?
+9.) what is diff b/w class and id?
 Ans- In HTML, both classes and IDs are attributes used to identify elements so you can style them with CSS or manipulate them with JavaScript. The main difference boils down to reusability.
 The Comparison
 Feature	ID (id)	Class (class)
@@ -165,17 +169,17 @@ Priority	High (overrides class styles).	Lower than IDs.
 
 10.) what is diff b/w inline and block?
 Ans- The Key Differences
-Feature	Block-level Elements	Inline Elements
-Line Break	Always starts on a new line.	Does not start on a new line.
-Width	Takes up the full width available.	Takes up only as much width as its content.
-Height/Width	You can set specific height and width.	height and width settings are ignored.
-Nesting	Can contain other block or inline elements.	Usually only contains data or other inline tags.
-Padding/Margin	Full control over all sides.	Top/bottom padding/margin don't push other elements away.
+Feature	               Block-level Elements	                    Inline Elements
+Line Break	      Always starts on a new line.	            Does not start on a new line.
+Width	          Takes up the full width available.	        Takes up only as much width as its content.
+Height/Width	  You can set specific height and width.	    height and width settings are ignored.
+Nesting	        Can contain other block or inline elements.	Usually only contains data or other inline tags.
+Padding/Margin	Full control over all sides.	              Top/bottom padding/margin don't push other elements away.
 Common Examples
 Block Elements: <div>, <h1> to <h6>, <p>, <ul>, <li>, <header>, <footer>, and <section>.
 Inline Elements: <span>, <a>, <img>, <strong>, <em>, and <button>.
 
-how to create tables in html
+10.)how to create tables in html
 Ans- <table>
   <tr>
     <th>Name</th>
@@ -232,15 +236,14 @@ Count your cells: When you use colspan="2", you must "delete" one <td> from that
 Vertical spacing: When you use rowspan="2", you must "delete" one <td> from the next row down, as the cell from above is now taking up that space.
 Visualizing: You can find great interactive visual examples on the MDN Web Docs for Tables.
 
-12.) diff span and div?
+12.) diff b/w span and div?
 Ans- The fundamental difference lies in how they affect the layout of the page:
 <div> (Division): A Block-level element. It acts like a container box that forces a line break, stacking vertically and taking up the full available width. Use it to group larger sections of content.
 <span>: An Inline element. It acts like a highlighter pen, flowing along with the text without breaking the line. Use it to style small chunks of text inside a block.
 
 13.) what are semantic elements?
 Ans- Semantic elements are HTML tags that clearly describe their meaning to both the browser and the developer.
-Think of them as labeled boxes. While a generic <div> just says "this is a container," a semantic element like <header> or <article> explicitly tells the browser, "This is the top of the page," or "This is a news story." Using them transforms your code from a meaningless stack of boxes into a structured, readable document. 
-Hover over the sections in the diagram below to see how semantic tags map to a real webpage layout.
+While a generic <div> just says "this is a container," a semantic element like <header> or <article> explicitly tells the browser, "This is the top of the page, Using them transforms your code from a meaningless stack of boxes into a structured, readable document.
 
 14.) what is fieldset, legend?
 Ans- <fieldset> and <legend> are a pair of semantic tags used to group related inputs within a form.
@@ -268,21 +271,22 @@ name="...": Crucial. This identifies the data on the server. If an input has id=
 
 16.) what are the different input types in html?
 Ans- If you do not specify a type, the browser defaults to type="text". 
+
 Text & Data Inputs
- 
 type="text": Default. A standard single-line box.
 type="password": Hides characters (usually with dots ••••) for security.
 type="email": Validates that text includes an @ symbol. On mobile, it opens a keyboard with a dedicated @ key.
 type="search": Adds an 'X' to clear text and may change the 'Enter' key to 'Search' on mobile keyboards.
+
 Selection & Choice
- 
 type="checkbox": A square box for selecting multiple options (e.g., "Select all that apply").
-type="radio": A circular button for selecting one option from a group (e.g., "Gender: M / F"). You must give them the same name to link them.
+type="radio": A circular button for selecting one option from a group (e.g., "Gender: M / F").
+              You must give them the same name to link them.
 type="range": Displays a slider. Good for imprecise numbers (like Volume or Brightness).
 type="file": Opens the device's file explorer to upload documents or images.
 type="color": Opens the system's color picker palette.
+
 Date & Time Widgets
- 
 These types activate the browser's native date picker interface, which is mobile-friendly and prevents format errors.
 Type
 Input Expected
@@ -290,22 +294,22 @@ date	Year, Month, Day (No time)
 month	Year and Month only
 time	Hours and Minutes (AM/PM)
 datetime-local	Full date and time (no timezone)
+
 Invisible & Functional
- 
 type="hidden": Stores data that users cannot see or edit (like a User ID or security token) but is sent to the server.
 type="submit": A button that automatically sends the form data to the server.
 
 17.) what are the diff input attributes in html?
 Ans- Attributes are the modifiers you add to the opening tag to control how that input behaves. They determine if a field is mandatory, if it has a default value, or if the user is even allowed to type in it. 
 Use the interactive tool below to toggle common attributes and see how they instantly change the input's usability and appearance.
+
 The Essentials: Data & Labeling
- 
 name="...": Crucial. As we learned earlier, this is the identifier used by the server. If you omit this, the input's data is not sent when the form is submitted.
 value="...": Sets the initial text inside the box. Use this to pre-fill data (e.g., value="John" on a profile edit page).
 placeholder="...": Displays a gray hint text that disappears when the user starts typing. Warning: Do not use this as a replacement for a <label>; it hurts accessibility.
+
 Controlling Access: Readonly vs. Disabled
- 
-Both attributes prevent the user from changing the text, but they work very differently behind the scenes. 
+Both attributes prevent the user from changing the text, but they work very differently behind the scenes.
                                 readonly                                    disabled
 Can user edit?                  No                                          No
 Can user focus/click?           Yes (Can select/copy text)                  No (Completely inert)
@@ -313,40 +317,28 @@ Sent to Server?                 Yes (Data is submitted)                     No (
 Best Use Case                   Fixed ID numbers, calculations.             Options not available yet.
 
 Validation Constraints
- 
 These attributes allow you to enforce rules without writing any JavaScript. The browser will automatically block the form submission if the rules are violated. 
 required: The user strictly cannot submit the form if this field is empty.
 min / max: Used with type="number" or type="date" to set a valid numeric range (e.g., min="1" max="100").
 minlength / maxlength: Limits the number of characters a user can type (e.g., maxlength="5" for a zip code).
 pattern="...": Accepts a Regular Expression (Regex). For example, pattern="[A-Za-z]{3}" forces the user to enter exactly three letters.
+
 User Experience (UX) & Autofill
- 
 autocomplete="...": Helps browsers fill forms faster. You should use specific values like email, username, new-password (for signups), or current-password (for login) instead of just on.
 autofocus: Automatically highlights this input as soon as the page loads, so the user can start typing immediately (e.g., on a Google search page).
 
 18.) diff b/w select and datalist?
-Ans- diff b/w select and datalist?
+Ans- 
 The main difference is control: the <select> tag forces the user to pick from a fixed menu (like a country list), while <datalist> acts as an autocomplete suggestion tool. It offers options but still allows the user to type their own free-form text (like a search bar).
 
-Key Differences
- 
-<select>
-<datalist>
-User Input
-Restricted. Must choose an existing option.
-Flexible. Can choose OR type anything.
-Filtering
-None. (Usually jumps to first letter match).
-Native Autocomplete. Filters list as you type.
-UI Appearance
-Dropdown menu (or wheel on mobile).
-Standard text box with a dropdown arrow.
-Best Use Case
-Gender, Country, Shipping Options.
-Search bars, Food preferences, Tags.
+Key Differences        <select>                                        <datalist>
+User Input      Restricted. Must choose an existing option.         Flexible. Can choose OR type anything.
+Filtering       None. (Usually jumps to first letter match).        Native Autocomplete. Filters list as you type.
+UI Appearance   Dropdown menu (or wheel on mobile).                 Standard text box with a dropdown arrow.
+Best Use Case   Gender, Country, Shipping Options.                  Search bars, Food preferences, Tags.
 
 19.) what is svg and canvas?
-Ans- what is svg and canvas?
+Ans- 
 SVG (Scalable Vector Graphics) and Canvas are two different technologies for drawing graphics on the web. The core difference is how they store the image data:
 SVG is Vector-based: It uses mathematical formulas (XML code) to draw shapes. Because it is math, it stays crisp and sharp no matter how much you zoom in.
 Canvas is Raster-based: It uses a grid of pixels (like a JPG or PNG). If you zoom in, it becomes blurry or pixelated.
@@ -1150,7 +1142,7 @@ The two most important attributes are src (where the image file is) and alt (a t
 HTML
 <img src="cat.jpg" alt="A cute orange cat sitting on a sofa">
 
-40.) what seo,what precuations we keep in while developing seo friendly?
+40.) what is seo,what precuations we keep in while developing seo friendly?
 Ans- 
 
 41.) diff form elements in html?
@@ -1404,3 +1396,74 @@ Ans-The <head> and <body> tags are the two fundamental pillars of an HTML docume
 
 50.)What is required attribute?
 Ans- The required attribute is a boolean HTML attribute that ensures a user fills out a specific form field before the form can be submitted. If a user tries to submit the form while leaving a required field blank, the browser will display an error pop-up and block the submission.
+
+
+51.)what is the importance of doctype
+Ans- 
+52.)list the inline elements
+Ans:Inline Elements: <span>, <a>, <img>, <strong>, <em>, and <button>.
+
+53.)list the block elements
+Ans- Block Elements: <div>, <h1> to <h6>, <p>, <ul>, <li>, <header>, <footer>, and <section>.
+
+54.)diff b/w semantic elements and non-semantic elements
+Ans- 
+55.)diff way to improve seo in html
+Ans- 
+56.)what is datalist
+Ans- 
+57.)what is select input
+Ans- 
+58.)diff b.w name, id and value in input field
+Ans- 
+59.)what is diff readonly and disabled in forms
+Ans- Both attributes prevent the user from changing the text, but they work very differently behind the scenes. 
+                                readonly                                    disabled
+Can user edit?                  No                                          No
+Can user focus/click?           Yes (Can select/copy text)                  No (Completely inert)
+Sent to Server?                 Yes (Data is submitted)                     No (Ignored by backend)
+Best Use Case                   Fixed ID numbers, calculations.             Options not available yet.
+
+60.)what is embed, object and iframe
+Ans- 
+61.)what is picture tag in html
+Ans- 
+62.)methods to add forms
+Ans- 
+63.)diff b/w radio and checkbox
+Ans- 
+64.)what are diff html input elements
+Ans- 
+65.)how to validate the forms in html
+Ans- 
+66.)diff b/w ordered list and unordered list
+Ans- 
+67.)how to create tooltip in html
+Ans- 
+68.)name few basic tags of html
+Ans- 
+69.)how to navigate one page to another page
+Ans- 
+70.)how to upload image in html
+Ans- 
+
+71.)how cell padding is diff from cell spacing?
+Ans- Cell padding adds internal space inside a cell, while cell spacing adds external space between adjacent cells
+
+72.)what is diff b/w meter tag and progress tag?
+Ans- The <progress> and <meter> tags both display a visual gauge, but their purposes differ entirely. The <progress> tag indicates the completion status of a time-consuming task, whereas the <meter> tag represents a static scalar measurement or fractional value within a known range.
+
+<label for="upload">Uploading your file:</label>
+<progress id="upload" value="45" max="100">45%</progress>
+
+<label for="storage">Disk Space Used:</label>
+<meter id="storage" value="75" min="0" max="100" low="50" high="80" optimum="40">75%</meter>
+
+
+Key Differences at a Glance
+Feature                                 <progress>                            <meter>
+Primary Purpose       To track the progression of a task (e.g., loading, uploading, surveys). To measure data points, gauges, or ratings (e.g., storage, battery, scores).
+
+Typical Range         Starts implicitly at 0, with an explicit or default max of 1 (e.g., 0 to 100%).   Custom boundaries, allowing you to set distinct min and max values.
+
+Specific Attributes    Only uses value and max.                  Includes min, max, value, plus low, high, and optimum.

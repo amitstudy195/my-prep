@@ -47,3 +47,137 @@ Profiling and Monitoring:
 Heap Snapshots: Use Chrome DevTools via the --inspect flag to capture heap snapshots and identify which objects are not being garbage collected.
 Memory Usage Tracking: Monitor process.memoryUsage() to identify trends in heap growth over time.
 Diagnostic Tools: Use Node Clinic to automatically diagnose performance bottlenecks and memory issues.
+
+6.)what is nodejs?
+Ans- Node.js is a free, open-source, cross-platform JavaScript runtime environment that allows developers to execute JavaScript code outside of a web browser.
+
+7.)Difference between Node.js and JavaScript?
+Ans- The core difference is that JavaScript is a programming language, whereas Node.js is a runtime environment that allows you to execute JavaScript code outside of a web browser.
+
+8.)Is Node.js single-threaded or multi-threaded?
+Ans- Node.js runs your JavaScript code on a single main thread per process. However, the Node.js runtime itself is multi-threaded under the hood, utilizing background threads via the libuv library to handle heavy I/O operations asynchronously without blocking your main code.
+
+9.)What kind of API functions are supported by Node.js?
+Ans- Node.js supports a vast range of built-in and third-party API functions, which are broadly categorized by their execution model (asynchronous vs. synchronous) and their functional module. Because Node.js is designed around an asynchronous, event-driven architecture, its core API functions prioritize non-blocking I/O operations.
+
+10.)How does Node.js handle concurrency being single-threaded?
+Ans- Node.js handles concurrency using an event-driven, non-blocking I/O model orchestrated by the Event Loop. While JavaScript execution runs on a single main thread, Node.js delegates time-consuming tasks (like network requests, database queries, or file system operations) to the underlying operating system or a background thread pool. This design allows the main thread to immediately move on to the next task instead of sitting idle.
+
+11.)What is REPL environment?
+Ans- A REPL (Read-Eval-Print Loop) environment is an interactive command-line tool that allows you to type code line-by-line, executes it immediately, and shows you the result in real time. It acts as a playground or scratchpad for software development, removing the need to write an entire program file just to test a single concept.
+
+12.)What is Cluster in Node.js?
+Ans- The Node.js Cluster module is a built-in feature that enables you to spawn multiple instances of your application (worker processes) to distribute incoming workloads across all available CPU cores.
+
+13.)What is a Module in Node.js?
+Ans- In Node.js, a module is a reusable block of code encapsulated within a JavaScript file or folder that handles a specific responsibility.
+
+14.)What is NPM?
+Ans- NPM (Node Package Manager) is the default package manager for the JavaScript runtime environment Node.js. It consists of a command-line tool used to install, update, and manage code libraries, and a massive online registry (the npm Registry) where developers share and download reusable code.
+
+15.)What is package.json?
+Ans- The package.json file is the central configuration hub and manifest for any JavaScript or Node.js project. It sits in the root directory of your project and is written in a standard JSON format to provide metadata, manage dependencies, and automate tasks.
+
+16.)What is package-lock.json?
+Ans- The package-lock.json file is an automatically generated npm file that records the exact versions, locations, and integrity hashes of every package and sub-dependency installed in a Node.js project. It guarantees identical, reproducible dependency installations across all development and production environments.
+
+17.)Name some inbuilt modules in nodejs?
+Ans- Some of the most commonly used inbuilt (core) modules in Node.js include fs, http, path, and os. These modules are compiled directly into the Node.js binary and can be used immediately without any external installation.
+
+18.)Why use Express.js instead of core Node.js for APIs?
+Ans- You use Express.js instead of core Node.js because Express.js abstracts low-level HTTP boilerplate, saving developers from writing hundreds of lines of repetitive code to manage routing, body parsing, and error handling. While core Node.js provides the raw runtime capabilities to handle network traffic, it lacks the structural utilities needed to build complex RESTful APIs efficiently.
+
+19.)What is a Middleware?
+Ans- In an Express application, middleware is a function that executes sequentially between receiving an incoming HTTP request and sending the final HTTP response back to the client. An Express application is essentially a series of these middleware function calls.
+
+A standard middleware function accepts three arguments:
+req: The request object representing the incoming HTTP request.
+res: The response object used to send back data, headers, or status codes.
+next: A callback function that passes control to the next middleware in line.
+
+20.)What is CORS?
+Ans- CORS stands for Cross-Origin Resource Sharing. It is a web browser security mechanism that allows web applications running on one domain to request and access resources from a different domain.
+
+21.)How Node is a runtime environment on server side?
+Ans- Browser execute JavaScript on the client side, and Similarly, Node.js executes JavaScript on the server side.
+
+22.)what is v8 engine?
+Ans- V8 is a JavaScript engine for the JavaScript language.
+
+23.)What is the difference between Runtime environment & Framework?
+Ans- Runtime Environment: primarily focuses on providing the necessary Infrastructure for code execution, including services like memory management and I/O operations.
+
+Framework: primarily focuses on simplifying the development process by offering a structured set of tools, libraries, and best practices.
+ 
+24.)What is the difference between Node.js and Express.js?
+Ans- Node.js is a runtime environment that allows the execution of JavaScript code server-side.
+
+Express.js is a framework built on the top Node.js.
+    It is designed to simplify the process of building web applications and APIs by providing a set of features like simple routing system, middleware support etc.
+
+25.)What are the difference between client-side(Browser) & Server-side(Node.js)?
+Ans-                                             Client-side                           Server-side 
+Environment Location                         Runs on the user's web browser             Runs on the server
+primary language                             HTML, CSS, JavaScript                       JavaScript
+Document/window/Navigator/Event Objects          Yes                                       No
+Request/ Response/Server/ Database Object        No                                        Yes
+Responsibilities                     Handles UI display, interactions, and client-side logic.    Handles business logic, data storage/access, authentication, authorization etc.
+
+26.)what are the 7 main features of nodejs?
+Ans- 1.Single Threaded  2.Asynchronous 3.Event-Driven 4.V8 JavaScript Engine 5.Cross-Platform 6.NPM(Node Package Manager) 7.Real-Time capabilities
+
+27.)What is Single Threaded Programming?
+28.)What is synchronous Programming?
+Ans- In a synchronous program, each task is performed one after the other, and the program waits for each operation to complete before moving on to the next one.
+
+synchronous programming focuses on the order of execution in a sequential manner, while single-threaded programming focuses on the single thread.
+
+29.)What is Multi Threaded Programming?
+Ans- In a multi-threaded application, multiple threads can execute multiple tasks simultaneously and parallelly.
+
+As soon as one thread starts a task, the next task is immediately iniated by creating a second thread.
+
+30.)What is Asynchronous Programming?
+Ans- In Node.js, asynchronous flow can be achieved by its single-threaded, non-blocking, and event-driven architecture.
+
+31.)What is the difference b/w synchronous and asynchronous programming?
+Ans-             synchronous programming                              Asynchronous programming 
+1.In a synchronous programming, tasks are executed one after another in a sequential manner.
+
+what is server
+client and server communcation 
+how to setup the backend
+what is npm 
+what is diff npm vs npx 
+what is callback 
+what is asyncawait 
+how to create simple node js server 
+what are modules in node js 
+what is http module and its usage 
+what is createServer in http 
+what are streams in nodejs 
+what are buffers in node js 
+what is os module 
+what is fs module 
+how to read the file,write the file, delete, append, 
+how to create the dir and folder using fs module 
+what is url module 
+what is use of require in node js 
+diff b/w process.nextTick() and setImmediate()
+what is nodemon 
+diff dependency and devdependencies 
+what is module.exports 
+what are the builtin modules in node js 
+how to create custom packages in node js 
+how to install third party package in node js 
+how to add routing in nodejs 
+what is the util module 
+what is event emitter
+how does event driven model works in node js 
+diff b/w process and os module
+what is global object in node js 
+what is promise in node js 
+what are the disadvantages of node js 
+which kind of applications we can build using node js 
+what is .env 
+

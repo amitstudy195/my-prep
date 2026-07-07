@@ -15,3 +15,53 @@ Ans- In Express, technically all controllers are middleware. However, developers
 Core Difference
 Middleware: Functions that process the request before it reaches the final destination. They handle generic tasks like logging, authentication, or parsing data.
 Controller: The "final" function (or route handler) that processes the actual business logic and sends the response back to the client.
+
+
+//expess js 
+what is express js 
+we have node, then why we are using express js
+how to create the express js server
+what is router in expessjs
+how to handle routes in express js 
+what is middleware 
+when we are posting the data what middleware we will use 
+what is express.json 
+what is the middleware used to show the static files in express js 
+what is cors 
+how to enables cors in express js 
+what is the rest api 
+how to implment simple rest api and test in postman 
+what are the CRUD operations 
+what is middleware in expressjs
+how do we use query params in express js 
+how to send response in express
+what is res.send vs res.json 
+what is dotenv package
+what is the use of process.env
+diff b/w local and global modules in express 
+diff b/w readfile and readfilesync 
+what is load balancing in node js 
+how do we make an http request in node js 
+what is the axios library 
+diff b/w fetch and axios 
+how do we connect node js with the db 
+what jwt 
+what is bcyprtjs 
+how to hash the password 
+how to generate the token
+how to implement jwt authentication 
+what is session 
+how do we manage sessions in node js 
+what is the use of morgon in express 
+what is throtting 
+what is the purpose .gitignore 
+what are the diff ways to secure our node js applications
+what is worker thread
+what is expess.router()
+what is passport.js
+how to implement authentication and authorization, register and login 
+what is mvc
+how to connect node express to MongoDB via mongoose
+what is flow to implement the backend 
+package.json -> db -> models -> controllers -> middlewares -> routing -> app.js
+how to do the MERN stack application

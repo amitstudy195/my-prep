@@ -1,0 +1,32 @@
+1.)What are the key features of Angular
+Ans- 
+2.)What is SPA (Single Page Application)
+Ans- 
+3.)Explain Angular architecture.
+Ans- 
+4.)What ismodule (NgModule)
+Ans- 
+5.)What iscomponent What are its main parts
+Ans- 
+6.)Difference between Component and Directive
+Ans- 
+7.)Types of directives in Angular
+Ans- 
+8.)What is data binding Explain all types.
+Ans- 
+9.)What is interpolation
+Ans- 
+10.)What is two-way data binding How do you achieve it
+Ans- 
+11.)What is ngIf and ngFor
+Ans- 
+12.)Difference between ngIf and hidden
+Ans- 
+13.)What are pipes Give examples.
+Ans- 
+14.)What is dependency injection
+Ans- 
+15.)What isservice Why do we use services
+Ans-
+16.)How do you createnew Angular project
+Ans-

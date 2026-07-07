@@ -124,6 +124,7 @@ CSS
 }
 Without !important: The text would be blue because an ID selector (#my-paragraph) is more specific than a class selector (.text).
 With !important: The text becomes red. The browser ignores the fact that the ID is "stronger" and obeys the !important command.
+
 6.) what is the diff id and class?
 Ans-
 In HTML and CSS, id and class are both attributes used to select and style elements, but they work in fundamentally different ways.
@@ -241,6 +242,7 @@ CSS
 h1, ..h2 { 
   color: red; /* ...NOBODY gets red text. The whole rule fails. */
 }
+
 8.) list the css combinators?
 Ans- CSS combinators are symbols used to define the relationship between two selectors. They tell the browser which elements to select based on how they are nested inside or placed next to each other in the HTML.There are four main combinators in CSS:
 1. Descendant Combinator (space)The most common combinator. It selects every element that is inside (nested within) the specified element, no matter how deep.Symbol: A single space (     )Logic: "Find all B inside A."CSS/* Selects ALL <p> tags inside <div>, even grandchildren */
@@ -539,6 +541,7 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
   background-color: #ffffff;
 }
+
 15.) What is nth child?
 Ans- The :nth-child() pseudo-class is a powerful CSS tool that lets you select one or more elements based exactly on their position among a group of siblings.
 
@@ -664,6 +667,7 @@ input::placeholder {
   color: #a9a9a9;
   font-style: italic;
 }
+
 17.) how to stack one image on top of another image?
 Ans- Stacking one image on top of another is a very common requirement in web design, often used for adding badges, watermarks, or text overlays to pictures.
 
@@ -1045,6 +1049,7 @@ CSS
   color: white;
   padding: 20px;
 }
+
 24.) what are the diff properties of the flexbox?
 Ans- To understand Flexbox properties, it is easiest to divide them into two groups: properties you apply to the Flex Container (the parent element) and properties you apply to the Flex Items (the child elements).
 
@@ -1524,19 +1529,252 @@ Device Pixel Ratio (DPR): High-resolution screens (like Retina displays) use mul
 If you want to be 100% sure, you can connect a real Android or iOS device to your computer via USB. This allows you to use your desktop's DevTools to inspect and debug code running live on the actual phone's browser, which is the gold standard for accuracy.
 
 43.) is it possible to apply id and class to the same element?
-Ans-
+Ans-Yes, it is entirely possible and highly common to apply both an id and a class to the same HTML element.
+
 44.) can we have same multiple id's in the given page?
-Ans-
+Ans- In web development, you cannot have multiple elements with the same id on a single page. The id attribute must be strictly unique across the entire HTML document.
+
 45.) how to create tooltip in css?
-Ans-
+Ans-To create a tooltip in CSS, you need to use a container with position: relative and a hidden child element with position: absolute that becomes visible when the container is hovered.
+
+HTML
+<div class="tooltip-container">
+  Hover over me
+  <span class="tooltip-text">This is the tooltip!</span>
+</div>
+
+css
+/* The container holding the trigger and the tooltip */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px dashed #333; /* Visual cue for users */
+}
+
+/* The hidden tooltip box placed above the container */
+.tooltip-container .tooltip-text {
+  position: absolute;
+  bottom: 125%; /* Places it directly above the text */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the tooltip horizontally */
+  
+  /* Styling and Visibility */
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  white-space: nowrap; /* Prevents text wrapping */
+  z-index: 1;
+  
+  /* Smooth Fade Effect */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: Adding a small arrow at the bottom of the tooltip */
+.tooltip-container .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip box */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Reveal the tooltip on hover */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 46.) how to create pager in css?
-Ans-
+Ans-html
+<nav aria-label="Pagination">
+  <ul class="pager">
+    <li><a href="#" class="pager-arrow">&laquo; Prev</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#" class="active" aria-current="page">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#" class="pager-arrow">Next &raquo;</a></li>
+  </ul>
+</nav>
+
+CSS
+/* Container alignment */
+.pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 8px; /* Spaces out the pagination buttons */
+  margin: 20px 0;
+}
+
+/* Individual links layout and styling */
+.pager a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out; /* Smooth hover transition */
+}
+
+/* Interaction and State Styling */
+.pager a:hover:not(.active) {
+  background-color: #f0f0f0;
+  border-color: #999999;
+}
+
+/* Styling for the currently active page */
+.pager a.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* Distinct styling for previous/next arrows */
+.pager-arrow {
+  font-weight: 600;
+  background-color: #f8f9fa;
+}
+
 47.) how to create pagination in css?
 Ans-
 48.) how to create dropdown in css?
-Ans-
+Ans-HTML
+<div class="dropdown">
+  <button class="dropbtn">Dropdown Menu</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+CSS
+/* Container needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the button that opens the dropdown */
+.dropbtn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when active */
+.dropdown:hover .dropbtn {
+  background-color: #2980b9;
+}
+
 49.) how to create navigation menu with active in css?
-Ans-
+Ans-HTML
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+CSS
+/* Layout and container style */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+/* Base style for all links */
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+/* Change color when hovering over links */
+.navbar a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* The active state style (Highlights current page) */
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+  font-weight: bold;
+}
+
+js
+const navLinks = document.querySelectorAll('.navbar a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    // Remove active class from all links
+    navLinks.forEach(nav => nav.classList.remove('active'));
+    // Add active class to the clicked link
+    this.classList.add('active');
+  });
+});
+
 50.) what is object-fit?
 Ans-
 51.) create the flex-container with equal widths?
@@ -1561,10 +1799,17 @@ visibility: hidden: Hides the element but preserves its space in the layout. The
 59.) what is word-wrap?
 Ans-
 60.) what is box model?
-Ans-
+Ans- The CSS Box Model is a foundational concept in web design that dictates every HTML element is treated as a rectangular box. The browser's rendering engine uses this model to calculate exactly how much space an element occupies and how it interacts with other elements on the webpage.
+📦 The 4 Layers of the Box Model
+Every element box consists of four nested layers, arranged from the inside out like an onion:
+Content: The innermost core containing actual text, images, or child elements.
+Padding: The transparent space immediately surrounding the content, keeping it inside the border.
+Border: The visible outline or frame wrapping around both the content and padding.
+Margin: The outermost transparent space separating this element from neighboring elements.
+
 61.) diff padding, margin and border
 62.) What is Column layout and give different properties 
-63.) What are diff background properties available 
+63.) What are diff background properties available in css?
 64.) What is specificity
 65.) What is Css positioning?
 Ans-The CSS positioning property defines how an element is placed in a document. By default, every element has a static position, meaning it follows the natural flow of the page.Once a position is set (to anything other than static), you can use the offset properties—top, right, bottom, and left—to move the element.
@@ -1602,3 +1847,134 @@ Ans-      Selector Type      Example         Specificity Score
 
 71.)what is diff b/w border and outline?
 Ans-The outline is always drawn outside the border edge. If an element has both, the border sits directly against the content/padding, while the outline wraps around that border.
+
+72.)how to make the application presentable
+73.)syntax for the css
+74.)different ways to apply the css 
+75.)what is the difference b/w inline, internal and external css
+76.)what is class and id
+77.)what is grouping selector
+78.)what is !important
+79.)what css specificity
+80.)what are the positions in css
+81.)what is diff b/w relative and absolute
+
+82.)what are the properties in box model?
+Ans- The 4 Box Model Layers & Properties
+These core properties dictate how elements are sized, spaced, and visually framed on a webpage.
+1. Content
+The core area where your actual text, images, or nested media are displayed.
+width & height: Define the dimensions of the content area.
+2. Padding
+The transparent space immediately surrounding the content (inside the border).
+Individual: padding-top, padding-bottom, padding-left, padding-rightShorthand: padding (e.g., padding: 10px 20px;)
+3. Border
+A line or frame that wraps directly around the content and its padding.
+Individual properties: border-width, border-style, border-color
+Shorthand: border (e.g., border: 1px solid black;)
+You can also target specific sides: border-top, border-bottom, etc.
+4. Margin
+The transparent space completely outside the border, used to push adjacent elements away.
+Individual: margin-top, margin-bottom, margin-left, margin-right
+Shorthand: margin (e.g., margin: 20px auto;)
+
+83.)how many types of selectors in css?
+Ans- CSS selectors are generally categorized into five main types used to target and style HTML elements.
+1. Simple Selectors
+These target elements directly based on their core names, identities, or classifications.
+Universal Selector (*): Matches all elements on the entire page.
+Type/Element Selector (element): Targets all HTML elements of a specific tag name (e.g., p, h1).
+Class Selector (.class): Targets all elements containing a specific class attribute.
+ID Selector (#id): Targets a single, unique element containing a specific id attribute.
+2. Combinator Selectors
+These select elements based on their hierarchical or structural relationships within the HTML tree.
+Descendant Selector (space): Ta rgets all nested child elements inside a specified parent.
+Child Selector (>): Targets only the direct, immediate children of a parent.
+Adjacent Sibling Selector (+): Targets an element that is directly next to another specified element. 
+General Sibling Selector (~): Targets all siblings that follow a specified element.
+3. Pseudo-class Selectors
+These style an element based on its dynamic state, user interaction, or positioning.
+Interaction States: :hover, :active, and :focus.
+Structural States: :first-child, :last-child, or :nth-child(n).
+Form States: :valid, :invalid, or :checked.
+4. Pseudo-elements Selectors
+These are used to style a specific part of an element rather than the whole tag.
+::before: Inserts and styles content before an element's actual content.
+::after: Inserts and styles content after an element's actual content.
+::first-line: Styles the very first line of text within an element.
+::first-letter: Styles the first character of text within an element.
+5. Attribute Selectors
+These target HTML components based on the presence, value, or matching substrings of their attributes.
+Presence ([attribute]): Matches any element with that attribute (e.g., [disabled]).
+Exact Match ([attribute="value"]): Matches exact values (e.g., [type="submit"]).
+Substring Matches: Advanced patterns like prefix matching (^=), suffix matching ($=), or wildcard containment (*=).
+Other Common Classifications
+While the five listed above represent the fundamental categories, developers often group selectors into two secondary functional categories:
+Grouping Selectors (,): Combines multiple independent selectors with commas to apply identical rules and reduce code redundancy.
+Complex/Compound Selectors: Chains simple selectors together without spaces to target elements that fulfill multiple criteria simultaneously (e.g., p.highlight targets paragraph elements that specifically carry the class "highlight").
+
+</li>
+84.)what is the default position in css 
+85.)what are the css3 features 
+86.)how to create animations in css 
+87.)what are the diff css layouts
+88.)diff b/w child selector and descedent selector
+89.)how do we center the div element horizontally and vertically
+90.)what is the picture element
+91.)what is inline and block elements
+92.)diff b/w inline and block
+93.)what is inline, block and inline-block
+94.)what is flexbox
+95.)diff b/w flexbox and grid
+96.)different properties of flex and grid
+97.)what is overflow property
+98.)how to make the website as the mobile first 
+99.)what is media query 
+100.)give the different media queries examples 
+101.)what is opacity and transparent 
+102.)different ways to apply the css 
+103.)what is the diff b/w inline, internal and external css
+104.)what is precedence or specificity of the above(3)
+105.)what is the purpose of !important 
+106.)what is the diff id and class 
+107.)what is the group selector 
+108.)diff child selector and descendent selector
+109.)diff b.w general sibling selector and adjusent sibling selector
+110.)how do we center the div element horizantally and veritcally...flexbox
+111.)diff b/w px em rem % vm and vh units
+112.)how to add text on top of the image
+113.)what is picture element
+114.)diff b/w inline, block and inline-block 
+115.)what is flex and why we have to use flexbox 
+116.)what are the diff properties of the flexbox
+117.)diff properties of grid 
+118.)grid vs flex
+119.)what is oveflow property
+120.)how to make the website as a mobile first website
+121.)what are media queries and give the syntax
+122.)how to make the page responsive in all the devices, write the media query for the same
+123.)how to apply multiple background images using css
+124.)what are diff css positions
+125.)what is position: static
+126.)d/w b/w hover, active and focus
+127.)what is the importance of @keyframe and where we will use it
+128.)what is the white-space property
+129.)what are diff css layouts
+130.)what is the column latyout in css
+131.)what is the attribute selector in css
+132.)how to select the input element using the attribute selector
+133.)what is text-overflow: ellipsis
+134.)what is calc() function in css
+135.)how to center the element inside the nested div using flex
+136.)how to stop repeated background in css
+137.)what are the diff orientations in css
+138.)css transforms
+139.)what is diff b/w max-width and min-width
+140.)what is margin: 0 auto and what is its importance
+141.)what is diff currentcolor and inherit
+142.)how to create dropdwon in css
+143.)what is one dimenstional layout and two dimenstional layout
+144.)how to use get the icons from the fontawesome
+145.)how to link css and how to javascript files 
+146.)best place to include external css and external js
+147.)can we have same muliple id's in the given page

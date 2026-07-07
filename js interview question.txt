@@ -1,11 +1,11 @@
-1.)what is javascript?
+✓1.)what is javascript?
 Ans- JavaScript (JS) is a high-level, versatile programming language primarily used to make web pages interactive and dynamic.If we look at web development like building a house:HTML is the structure and the walls (the foundation).CSS is the paint, the furniture, and the interior design (the styling).JavaScript is the electricity and plumbing—it makes the doors open, the lights turn on, and the water run (the behavior and interactivity).
 Key Characteristics of JavaScript:Client-Side and Server-Side: Originally, it was only meant to run inside a user's web browser (client-side). Today, thanks to environments like Node.js, it can also run on web servers and backend databases.Dynamically Typed: You do not have to strictly define what type of data a variable holds (like a number or text) before using it. The engine figures it out on the fly.Event-Driven: It is designed to listen for and react to user actions. When you click a button, scroll down a page, or submit a form, JavaScript is what catches that "event" and triggers a response.Single-Threaded but Asynchronous: It processes one command at a time on a single main thread. However, it uses a mechanism called the "Event Loop" to handle long tasks (like fetching movie data from TMDB) in the background so the website doesn't freeze up while waiting. 
 
 2.)what is diff b/w javascript and typescript?
 Ans- The main difference between JavaScript and TypeScript is that TypeScript is a "superset" of JavaScript that adds static typing. While JavaScript determines variable types while the program is running (dynamic typing), TypeScript allows you to define types upfront and catches errors while you are still writing the code (static typing).
  
-3.)diff var, let and const?
+✓3.)diff var, let and const?
 Ans- Variable is a container used to store the data....
  re-declaration is allowed in var
  re-assignment is allowed in var
@@ -91,11 +91,11 @@ in javascript data types are divided into two categories
 
 //f) symbol...A symbol represents a unique and immutable identifier, which is often used for object properties to avoid naming conflicts.
 
-g)bigint...it is used for very large integers that exceeds the limit of the number data type. Bigint values are created by appending n to the end of an integer.
+g)bigint...it is used for very large integers that exceeds the limit of the number data type. Bigint values are created by appending to the end of an integer.
 
 // 2) non Primitive data types / reference data types
     it is mutable
-// a) object -> stores key - value pair
+// a) object -> stores key - value pair 
 
 // let person = { //curly bracket
 //     name: "venkat",
@@ -361,23 +361,15 @@ document.getElementById("innerDiv").addEventListener("click", () => {
 18.)what is event propagation?
 Ans: Event Propagation defines the order in which event handlers are triggered when an event occurs in the DOM. In HTML and React, this behavior is handled using two main mechanisms: Event Bubbling and Event Capturing.
 
-19.)what is the purpose of the Map Method in JavaScript?
-Ans: The map() method in javascript is used to create a new array by applying a specified function to each element in an existing array.
- 
- const numbers = [2,3,4,5,6];
- const double = numbers.map(num => num * 2);
-
- console.log(numbers)
- console.log(double)
 
 19.)what is diff b/w map and set?
-Ans:The primary difference is that a Set is a collection of unique values, while a Map is a collection of key-value pairs.
+Ans:The primary difference is that a Set is a collection of unique values, while a Map is a collection of key-value pairs.Map and Set are general-purpose collections with strong references.
 
-20.)what is diff b/w map, set, weakmap, and weakset?
-Ans:Map and Set are general-purpose collections with strong references, while WeakMap and WeakSet store weak references to objects, allowing garbage collection. Map stores key-value pairs of any type. Set stores unique values. WeakMap requires object keys and enables memory management, while WeakSet only stores unique objects.
+20.)what is diff b/w weakmap, and weakset?
+Ans:WeakMap and WeakSet store weak references to objects, allowing garbage collection. WeakMap requires object keys and enables memory management, while WeakSet only stores unique objects.
 
 20.)What are weak maps and weak sets in JavaScript?
-Ans:Weak maps:- A WeakMap is a collection of key-value pairs where the required to be objects.
+Ans:Weak maps:- A WeakMap is a collection of key-value pairs where the required to be objects keys.
 ex- let WeakMap = new WeakMap();
 let obj = {name: "Adam"};
 
@@ -394,6 +386,7 @@ obj = null;
 console.log(WeakSet.has(obj));
 
 Both WeakMap and WeakSet are non-iterable, have no size property, and are ideal for temporary data storage and memory-efficient management of objects.
+
 21.)what is the use of preventdefault?
 Ans:The event.preventDefault() method is used in JavaScript to stop the browser from executing its default action for a specific event.
 
@@ -431,10 +424,10 @@ Ans:// function expression ...function stored inside the variable
 // console.log(calculateTax1(1000));
 
 27.)what is function declaration?
-Ans:
+Ans: 
 28.)what is arrow function?
 Ans:In JavaScript, an arrow function is a compact alternative to traditional function expressions, introduced in ES6 (2015). It uses the "fat arrow" syntax (=>) to provide a more streamlined way to write functions, making code cleaner and more readable.
-function(a, b) { return a + b; }(a, b) => a + b;
+function(a, b) { return a + b; } ->  (a, b) => a + b;
 
 29.)what is anonymous function?
 Ans:anonymous function: function without name
@@ -461,6 +454,7 @@ ex- const numbers = [1,2,3,4,5,6];
 const double = numbers.map(function(num){
     return num*2;
 })
+
 33.)what is closure?
 Ans:In javascript a closure is a function that remembers the environment in which it was created even after the outer function has finished executing.
 
@@ -477,25 +471,69 @@ const closureFunction = outerFunction();
 closureFunction();
 
 34.)what is inheritance?
-Ans:
+Ans:Inheritance in JavaScript is a mechanism that allows an object or a class to acquire and reuse the properties and methods of another object or class. Unlike strictly class-based languages like Java or C++, JavaScript relies fundamentally on a concept called Prototypal Inheritance to link objects together.
+
 35.)what is object.prototype?
-Ans:
+Ans:In JavaScript, Object.prototype is the fundamental object at the top of the prototype inheritance chain. Almost all objects in JavaScript inherit properties and methods from it—either directly or through another prototype (like Array.prototype or Date.prototype).
+
 36.)how to add new property to the existing object in js?
-Ans:
+Ans:You can add a new property to an existing JavaScript object using dot notation, bracket notation, or the Spread operator.
+const user = { name: "Alice" };
+
+// Add the property
+user.age = 30; 
+
+console.log(user); // { name: "Alice", age: 30 }
+
 37.)what is this keyword?
-Ans:
+Ans:In object-oriented programming languages, the this keyword is a special reference variable that points directly to the current object instance executing the code.
+
 38.)what are diff scopes in js?
-Ans: 
+Ans: In JavaScript, scope determines the accessibility and visibility of your variables and functions across different parts of your code. JavaScript has four primary types of scopes: Global scope, Module scope, Function scope, and Block scope.
+
 39.)what is global scope, local scope, function scope, lexical scope?
-Ans:
+Ans:global scope: variables declared outside all functions, variable are accessed anywhere in the program.
+
+function scope: variables declared inside the function are accessible only inside to that function
+function(let, var, const)
+
+Block scope: variable declared with let and const inside {} block only accessible inside to the block
+
+lexical scope: inner function can access variable of the outer function.
+
 40.)what is local storage?
-Ans:
+Ans:Local Storage is a web browser feature that allows websites to store data directly on your device in the form of key-value pairs. Unlike cookies or session storage, this data does not expire when the browser closes, meaning it persists even after you restart your computer.
+
+localStorage.setItem('key', 'value') - Saves a new piece of data.
+localStorage.getItem('key') - Retrieves the saved data.
+localStorage.removeItem('key') - Deletes a specific piece of data.
+localStorage.clear() - Deletes all data stored by that specific website.
+
 41.)what is session storage?
-Ans:
+Ans:Session storage is a built-in web browser feature that allows web applications to store temporary data as key-value pairs locally on a user's device.data is completely erased when browser tab or window is closed.
+// 1. Store data
+sessionStorage.setItem("username", "Alex");
+
+// 2. Retrieve data
+const user = sessionStorage.getItem("username"); // Returns "Alex"
+
+// 3. Delete a specific item
+sessionStorage.removeItem("username");
+
+// 4. Wipe all data for the tab
+sessionStorage.clear();
+
 42.)what is cookie?
-Ans:
+Ans:A cookie (or HTTP/web cookie) is a small text file created by a website and stored on your device by your web browser. It acts as a website's memory, allowing the site to "remember" your actions, preferences (like language settings), and login status.
+
 43.)diff b/w local storage and session storage?
-Ans:
+Ans:⚖️ Session Storage vs. Local Storage vs. Cookies
+Feature     Session Storage (sessionStorage)           Local Storage (localStorage)                    Cookies
+Data Lifetime   Cleared when tab closes.                Persistent until manually deleted.      Set by an expiration date.
+Scope           One specific browser tab.               Shared across all tabs of the origin.   Shared across all tabs of the origin.
+Capacity        ~5 MB.                                   ~5 MB to 10 MB.                        Very limited (~4 KB).
+Server      Transfer Stays strictly in the browser.      Stays strictly in the browser.      Sent to the server with every HTTP request.
+
 44.)what is hoisting and its usage?
 Ans:hoisting in js where variable declaration and function declaration are moved to the top of the containing scope automatically
 Variable Hoisting (var): Declarations using var are hoisted and initialized as undefined.
@@ -523,7 +561,8 @@ Ans: it enforces various rules to make your code cleaner and more secure.
 Ans: Arrow functions provide a shorter, more concise syntax compared to normal functions. The most critical difference is how they handle the this keyword: normal functions have a dynamic this that changes based on how they are called, while arrow functions inherit this lexically from their surrounding scope.
 
 47.)what is es6 latest feature?
-Ans:
+Ans:  ES6 (ECMAScript 2015) is a specific major version of JavaScript, meaning it doesn't have an ongoing "latest feature" of its own. Its flagship additions include let / const for block scoping, Arrow Functions for concise syntax, and Promises for handling asynchronous operations.
+
 48.)what is destructuring?
 Ans:// destructuring in js allows us to extract values from objects or arrays and assign them to variables in the single line
 
@@ -535,7 +574,7 @@ const arr = [1,2,3,4,5,6];
 // const three = arr[2];
 // const four = arr[3];
 // const five = arr[4];
-// const one = arr[0];
+// const six = arr[5];
 
 // with destructuring
 const [one, two, three, four, five] = arr;
@@ -543,30 +582,117 @@ const [one, two, three, four, five] = arr;
 console.log(one, two, three, four, five);
 
 49.)what is object destructuring and array destructuring?
-Ans:
+Ans:Object destructuring extract properties from an object and assign them to variables of the exact same name.
+const user = {
+    name:"venkat",
+    city:"bangalore",
+    country:"india"
+}
+const {name, city, country} = user
+
+console.log(name);
+console.log(city);
+console.log(country);
+
+Array destructuring unpacks values based on their sequential position inside an array.
+const arr = [1,2,3,4,5,6];
+const [one, two, three, four, five] = arr;
+
+console.log(one, two, three, four, five);
+
 50.)what is optional chaining operator?
-Ans:
-51.)what is nullish coaleshing operator?
-Ans: 
+Ans: The optional chaining operator (?.) allows you to safely access deeply nested object properties or call methods without checking if each intermediate reference exists. If a reference evaluates to null or undefined, the expression "short-circuits" and returns undefined instead of throwing a runtime error.
+
+51.)what is nullish coalescing operator?
+Ans: The nullish coalescing operator (??) is a logical operator that returns its right-hand operand when its left-hand operand is null or undefined. Otherwise, it returns its left-hand operand. It is primarily used to provide safe default values for variables without accidentally overriding valid, "falsy" data like 0, false, or empty strings ("").
+
 52.)what is ternary operator?
-Ans: 
+Ans: A ternary operator is a shorthand programming tool that evaluates a condition and returns one of two values depending on whether that condition is true or false. It takes three operands (the condition, the true value, and the false value) and acts as a compact alternative to an if...else statement.
+
 53.)what is event loop?
 Ans:The event loop is a continuously running process in JavaScript runtimes (like browsers and Node.js) that enables asynchronous, non-blocking behavior despite JavaScript being single-threaded. It constantly checks if the call stack is empty, then moves tasks from the callback queue to the stack for execution.
 
 54.)diff js events?
-Ans:
-55.)what is diff ways of adding events in js?
 Ans: 
+🖱️ Mouse Events
+click: Fires when an element is clicked using the primary mouse button.
+dblclick: Fires when an element is clicked twice rapidly.
+mouseover: Fires when a pointer moves onto an element.
+mouseout: Fires when a pointer leaves an element.
+mousemove: Fires continuously as the mouse moves over an element.
+
+⌨️ Keyboard Events
+keydown: Fires the moment any key on the keyboard is pressed down.
+keyup: Fires when a pressed key is released.
+keypress: Fires when a key that produces a character value is pressed (largely deprecated in favor of keydown).
+
+📝 Form & Input Events
+submit: Fires when a form is submitted.
+change: Fires when a user alters the value of an element (e.g., picking a dropdown option).
+input: Fires instantly whenever the value of an <input>, <select>, or <textarea> changes.
+focus: Fires when an element receives focus (e.g., clicking inside a text box).
+blur: Fires when an element loses focus.
+
+💻 Window & Browser Events
+DOMContentLoaded: Fires when the initial HTML document is completely parsed, without waiting for stylesheets or images to load.
+load: Fires when the whole page has loaded, including all dependent resources like images.
+resize: Fires when the browser window size changes.
+scroll: Fires when the document view or an element is scrolled.
+
+55.)what is diff b.w of adding inline events vs addEventListener in js?
+Ans: The core difference is that addEventListener allows you to attach multiple functions to a single event, whereas inline events overwrite any previous handlers assigned to that element. Inline event handlers mix structure (HTML) with behavior (JavaScript), which breaks modern development best practices.
+
 56.)what is DOM and explain in detail?
-Ans:
-57.)how to add the class, remove the class, add the style, remove the style using?
-Ans:
+Ans:The Document Object Model (DOM) is a programming interface that treats web pages as a tree of objects. It acts as a bridge between your HTML/XML code and programming languages like JavaScript, allowing developers to read, add, update, or remove page content, structure, and styles on the fly.
+
+57.)how to add the class, remove the class, add the style, remove the style using dom?
+Ans: To manipulate classes and inline styles on an HTML element using the Document Object Model (DOM), you use the classList property for classes and the style property (or removeAttribute) for styles.First, select your element in JavaScript:
+javascript
+const element = document.querySelector('.my-element');
+Managing Classes1. Add a ClassUse classList.add() to append one or more classes without modifying existing ones.
+javascript
+// Add a single class
+element.classList.add('new-class');
+
+// Add multiple classes at once
+element.classList.add('class-one', 'class-two');
+2. Remove a Class
+Use classList.remove() to safely delete specific classes from the element.
+javascript
+// Remove a single class
+element.classList.remove('old-class');
+
+// Remove multiple classes at once
+element.classList.remove('class-one', 'class-two');
+
+Managing Styles
+1. Add/Modify a Style
+Use the style property followed by the camelCase version of the CSS property name.javascript
+// Add a single style property
+element.style.backgroundColor = 'blue';
+
+// Add a property that has a dash (use camelCase)
+element.style.fontSize = '24px'; 
+2. Remove a Style
+You can remove inline styles in two different ways depending on your exact goal:
+Method A: Reset the property value
+Setting the property to an empty string "" removes the inline style, allowing the element to fall back to its external CSS file rules.
+javascript
+element.style.backgroundColor = '';
+Method B: Remove the entire style attribute
+If you want to strip all inline styles applied to the element at once, use removeAttribute().
+javascript
+element.removeAttribute('style');
+
 58.)what is toggle in DOM?
-Ans:
+Ans: In the Document Object Model (DOM), a toggle acts like a digital light switch to alternate an item between two states, most commonly accomplished using the built-in element.classList.toggle() JavaScript method. This native DOM API method dynamically adds a CSS class name to an HTML element if it is missing, or removes it if it already exists.
+
 59.)how to create the element using DOM?
-Ans:
+Ans:To create an element using the Document Object Model (DOM), you must use the document.createElement() method, configure its content or attributes, and insert it into the webpage.
+
 60.)diff b/w append and appendchild?
-Ans:
+Ans:The primary differences are that append() allows multiple arguments, accepts raw strings, and returns nothing, while appendChild() is stricter—it only accepts a single Node object and returns the appended node.
+
 61.)what are template literals?
 Ans: Template literals (also called template strings) are a flexible way to work with strings in JavaScript using backticks (`), $ sign, and curly bracket  instead of standard single or double quotes. Introduced in ES6, they simplify common tasks like combining variables with text and creating multi-line strings.
 
@@ -616,7 +742,8 @@ console.log(arr1);
 console.log(arr2);
 
 65.)diff b/w rest and spread?
-Ans:
+Ans: The core difference is that the spread operator unpacks elements from a collection, whereas the rest parameter packs separate elements into a single collection. Both features use the exact same triple-dot syntax (...), but they serve completely opposite purposes based on where you place them in your code.
+
 66.)what is settimeout?
 Ans:setTimeout is a built-in JavaScript function used to schedule the execution of a function after a specified delay. It allows you to run code once after a period of time has passed, rather than executing it immediately.
 
@@ -627,15 +754,20 @@ Ans:setInterval is a built-in JavaScript method used to repeatedly execute a spe
 Ans:The primary difference between setTimeout and setInterval is how many times they execute code: setTimeout runs it once after a delay, while setInterval runs it repeatedly at fixed intervals.
 
 69.)what is synchronous?
-Ans:
+Ans:In JavaScript, synchronous execution means that code runs sequentially, line-by-line, from top to bottom. Each line of code must fully finish executing before the JavaScript engine moves on to the next line.
+
 70.)what is asynchronous?
-Ans:
-71.)diff b/w sync and async?
-Ans:
+Ans:Asynchronous JavaScript is a programming technique that allows your code to start long-running tasks and remain responsive to other events instead of waiting for those tasks to finish.
+
+71.)diff b/w synchronous and asynchronous?
+Ans: Synchronous processes happen in sequence: you must wait for the first task to finish before the next one starts. Asynchronous processes happen independently: tasks run in the background, allowing the system to continue working without waiting for the previous one to complete.
+
 72.)what is callback and give the explanation?
-Ans:
+Ans:A callback is a function passed into another function as an argument, which is then executed (or "called back") by that receiving function. Callbacks ensure that specific code doesn't run until a parent task finishes, which is highly useful for both immediate routines and delayed, asynchronous operations (like fetching data).
+
 73.)what is callback hell?
-Ans:
+Ans:Callback hell is an anti-pattern in asynchronous programming (especially JavaScript) where multiple callbacks are nested inside one another. This creates deep, pyramid-shaped code that is notoriously hard to read, debug, and maintain. It occurs when subsequent tasks depend on the completion of previous asynchronous operations.
+
 74.)what is promise?
 Ans:Promise handle asynchronous tasks in JavaScript by providing a more readable and structured approach than callbacks for handling outputs.
 pending       fullfilled         rejected
@@ -658,9 +790,50 @@ fetchData().then(
     })
 
 75.)what is promise chaining?
-Ans:
+Ans: Promise chaining is a technique used in JavaScript to execute multiple asynchronous operations in a sequence, where each step waits for the previous one to complete. It is achieved by chaining multiple .then() methods together, allowing the output of one promise to become the input for the next, which keeps code clean and avoids "callback hell".
+
 76.)diff promise methods, promise.all, promise.any, promise.race?
 Ans:
+ 1. Promise.all()
+Use this when you need all tasks to succeed before moving forward. It executes operations concurrently and aggregates the data.
+Behavior: It waits for every promise in the array to fulfill.
+Fails Fast: If even one promise fails, the entire operation immediately blows up and jumps to your .catch() block, ignoring any other remaining or successful results.
+Use Case: Fetching a user's profile info, their order history, and their settings concurrently to render a dashboard. You need all three datasets for the page to display properly.
+Example:
+javascript
+Promise.all([fetchUser(), fetchOrders(), fetchSettings()])
+  .then(([user, orders, settings]) => { /* Works! */ })
+  .catch(err => console.error("One of them failed!", err));
+
+2. Promise.any()
+Use this when you want at least one success and you do not care about the failures unless everything fails.
+Behavior: It short-circuits and resolves as soon as the first successful promise completes. It completely ignores rejections from faster promises if a slower one succeeds later.
+Aggregated Rejection: It only throws an error if every single promise fails. In that case, it returns a special AggregateError grouping all individual errors together.
+Use Case: Querying redundant resources, like trying to fetch an asset from a primary server, a secondary CDN, and a local cache simultaneously. You only need the one that returns successfully first.
+Example:
+javascript
+Promise.any([fetchFromCDN1(), fetchFromCDN2()])
+  .then(fastestData => { /* Got it! */ })
+  .catch(aggregateError => console.log("All CDNs failed"));
+
+3. Promise.race()
+Use this when you want a result from the absolute fastest operation, completely regardless of whether it succeeds or fails.
+Behavior: It settles as soon as the very first promise finishes. If the fastest promise resolves, Promise.race resolves; if the fastest promise rejects, Promise.race rejects.
+Use Case: Implementing network request timeouts. You can pit a standard network request promise against a setTimeout timer promise that throws an error after 5 seconds. Whichever completes first wins the race.
+Example:
+javascript
+const timeout = new Promise((_, reject) => setTimeout(() => reject("Timed out!"), 5000));
+
+Promise.race([fetchData(), timeout])
+  .then(data => { /* Request completed under 5 seconds */ })
+  .catch(err => { /* Either request failed, or it took over 5 seconds */ });
+
+Method              Resolves When...                Rejects When...                              What it Returns on Success
+Promise.all         All promises resolve.           Any single promise rejects.                 An array of all resolved values.
+Promise.any         The first promise resolves.      All promises reject.                       The single value of the fastest successful promise.
+Promise.race        The first promise settles (resolves).   The first promise settles (rejects).    The value of the fastest settled promise.
+
+
 77.)what is async/await?
 Ans:async - Declaring a function with async makes it return a promise
 
@@ -679,73 +852,125 @@ async function fetchData(){
 }
 
 78.)what is fetch?
-Ans:
+Ans:Fetch API: A built-in JavaScript interface that allows web browsers to request data (like JSON files, images, or HTML) from a server over a network. It is the modern standard for making asynchronous network requests, replacing older methods like XMLHttpRequest.
+
 79.)what is for loop?
-Ans: 
+Ans: A for loop is a programming construct used to repeat a block of code a specific number of times. It is ideal for executing repetitive tasks, such as iterating through items in a list or running a calculation until a predefined condition is met.
+
 80.)what is for....in?
-Ans:
+Ans:The for...in loop is a JavaScript control flow statement used to iterate (loop) over the enumerable properties (keys) of an object. It provides a way to inspect the names of an object's properties one by one.
+
 81.)what is for....of?
-Ans: 
+Ans: The for...of loop is a JavaScript statement that creates a loop iterating over iterable objects (like arrays, strings, and maps). It directly grabs the values of the elements sequentially, making it a highly readable and easy-to-use alternative to traditional index-based for loops.
+
 82.)what is foreach?
-Ans:
+Ans:A foreach is a programming control structure and loop used to iterate sequentially through items in a collection (like an array or a list). Instead of manually tracking and incrementing loop indexes, foreach accesses each element directly, making code cleaner, more readable, and less error-prone.
+
 83.)diff b/w for....in and for....of?
-Ans: 
+Ans: The fundamental difference is that for...in iterates over an object's enumerable property keys, while for...of iterates over the actual values of an iterable collection.
+
 84.)what are conditions in js?
-Ans: 
+Ans: Conditions in JavaScript are expressions that evaluate to a boolean value of either true or false to control the flow of a program. They act like decision-making crossroads in your code, telling the script to execute specific actions only if certain criteria are met.
+JavaScript provides several structures, known as conditional statements, to handle these decisions.
+
 85.)what is if, if else and else if?
-Ans: 
+Ans: 1. The if Statement
+Runs a specific block of code only if the provided condition evaluates to true. If the condition is false, the program skips this block entirely.
+2. The else Statement
+Acts as the fallback or default case. It is attached to the end of an if statement and runs its block of code only if the initial if condition (and any else if conditions) evaluate to false.
+3. The else if Statement
+Allows you to check multiple conditions in sequence. It is placed between an if and an else. If the first if is false, the program checks the else if. If that is true, it runs its block of code; if not, it moves to the next.
+
 86.)what is switch?
-Ans:
+Ans:A switch statement in JavaScript is a conditional control-flow statement used to evaluate a single expression against multiple possible values
+
 87.)what is "this" keyword in js?
-Ans: 
+Ans: In JavaScript, the this keyword refers to the object that is currently executing or invoking the function. Unlike many other languages where this always points to the instance of a class, its value in JavaScript is dynamically determined at runtime based entirely on how a function is called, not where it is defined.
+
 88.)what is BOM?
-Ans:
-89.)what is super key in js?
-Ans: 
+Ans:In JavaScript, BOM stands for Browser Object Model, which is a collection of objects provided by the web browser to allow JavaScript to interact with the browser itself outside of the web page content.
+
+89.)what is super keyword in js?
+Ans: In JavaScript, the super keyword is used to access and call functions on an object's parent class. It is an essential tool for object-oriented programming when creating class hierarchies with the extends keyword.
+
 90.)what is JSON.stringfy?
-Ans:
+Ans:JSON.stringify() is a built-in JavaScript method that converts a JavaScript object, array, or primitive value into a JSON-formatted string.
+
 91.)what is JSON.parse?
-Ans: 
+Ans: JSON.parse() is a built-in JavaScript method that converts a text string formatted in JSON (JavaScript Object Notation) into a usable JavaScript object.
+
 92.)diff b/w json.stringfy and json.parse?
-Ans: 
+Ans: JSON.stringify() converts a JavaScript object into a JSON string, whereas JSON.parse() converts a JSON string back into a JavaScript object.
+
 93.)what is queryselector?
-Ans:
+Ans:The document.querySelector() method is a built-in JavaScript web API used to select and return the first HTML element that matches a specified CSS selector or group of selectors. If no matching elements are found within the webpage DOM, the method returns null.
+
 94.)what is queryselectorall?
-Ans:
+Ans:querySelectorAll() is a built-in JavaScript method used to select all HTML elements inside the Document Object Model (DOM) that match a specific CSS selector.
+
 95.)diff b/w queryselector and queryselectorall?
-Ans:
+Ans:The core difference is that querySelector() returns only the very first element that matches a CSS selector, while querySelectorAll() returns all matching elements.
+
 96.)what is document.getElementById?
-Ans:
+Ans:document.getElementById() is a built-in JavaScript method used to select a single HTML element from a webpage by its unique id attribute. It is one of the fastest and most common ways to interact with the Document Object Model (DOM) because web browsers optimize lookups for unique IDs.
+
 97.)what is document.getElementByClassName?
-Ans:
+Ans:document.getElementsByClassName() is a built-in JavaScript method that searches the web page and returns an array-like collection of all HTML elements that have the specified class name.
+
 98.)what is document.getElementByTagName?
-Ans:
+Ans:document.getElementsByTagName is a built-in JavaScript method that searches the webpage for elements with a specific HTML tag (like p, div, or a). It returns a live HTMLCollection of matching elements in the order they appear in the DOM.
+
 99.)what is pure function?
-Ans:
+Ans: A pure function is a core concept in functional programming where a function's return value is determined solely by its input arguments, and its execution produces absolutely no side effects.
+// Pure Function
+function multiply(a, b) {
+    return a * b;
+}
+
+console.log(multiply(2, 3));
+
 100.)what is impure function?
-Ans:
+Ans:An impure function is a function that either produces different outputs for the same inputs or causes observable changes (side effects) in the program outside of its local scope.
+let total = 0; 
+
+function addToTotal(value) {
+  total += value; // Mutates external variable 'total'
+  return total; 
+}
+
 101.)diff pure and impure function?
-Ans:
+Ans: A pure function always returns the exact same output for the same arguments and causes no "side effects" (e.g., modifying global variables or making network requests). An impure function behaves unpredictably; it can return different results for the same arguments or produce side effects that alter the outside environment.
+
 102.)what is regex?
-Ans:
+Ans:A Regex (Regular Expression) is a special sequence of characters that forms a search pattern. It is used in programming and text editing to quickly find, extract, replace, or validate data (like checking if an email address is properly formatted).
+
 103.)what is js modules?
-Ans:
-104.)how js works behind the screen?
-Ans:
+Ans:A JavaScript module is a standalone file containing code that encapsulates specific functionality and can be shared across an application. It breaks down massive codebases into small, organized, and reusable pieces.
+
+104.)how js works behind the scene?
+Ans:Behind the scenes, JavaScript operates as a single-threaded, synchronous language that runs inside a Runtime Environment (like a browser or Node.js) using a specialized JS Engine (like Google's V8). It processes code line-by-line using a system of memory allocation, compilation, and an asynchronous event loop.
+
 105.)how do we debounce a function in js?
-Ans:
+Ans: To debounce a function in JavaScript, you create a wrapper function that uses clearTimeout and setTimeout to delay the execution of your target function until a specific amount of time has passed since its last invocation.
+
 106.)how do we throttle a function in js?
-Ans:
+Ans: To throttle a function in JavaScript, you wrap it in a custom closure or a library helper that enforces a maximum execution rate, allowing the inner function to run at most once per specified time interval.
+
 107.)what is error handling in js?
-Ans: 
+Ans:  Error handling in JavaScript is the practice of anticipating, catching, and managing errors that occur during code execution instead of letting the program crash. It keeps applications running smoothly and provides useful feedback for debugging.
+
 108.)how to handle the errors in js?
-Ans: 
+Ans: In JavaScript, errors are handled primarily using the try...catch...finally block to capture runtime exceptions and prevent application crashes.
+
 109.)what is try, catch, finally, throw in error handling?
-Ans: 
+Ans: try, catch, finally, and throw are the core blocks and keywords used in programming languages (like JavaScript, Java, C#, and C++) to anticipate, capture, and recover from runtime errors without crashing an application.
+
 110.)what is JSON?
-Ans: 
+Ans: JSON (JavaScript Object Notation) is a lightweight, text-based format used to store and transport structured data.
+
 111.)how to clone an object?
-Ans: 
+Ans: The best native way to clone an object depends entirely on whether you need a shallow copy (top-level properties only) or a deep copy (nested objects and arrays included).
+
 112.)What is event delegation?
 Ans: A technique that allows you to manage events for multiple elements more efficiently by using a single event listener on a common parent element rather than on each individual child element.
 
@@ -823,7 +1048,7 @@ const double2 = double(2);
 console.log(double2(3));
 console.log(double2(5));
 
-117.)What is a Generator function, and how is it used?
+✓117.)What is a Generator function, and how is it used?
 Ans:A generator function in JavaScript is a special type of function that can pause its execution and resume it later.
 
 function* infiniteSequence(){
@@ -839,7 +1064,7 @@ const seq = infiniteSequence();
 for(let i=0; i<10; i++)
 console.log(seq.next().value);
 
-118.) How does javascript handle memory management?
+✓118.) How does javascript handle memory management?
 Ans: JavaScript handles memory management automatically using a process called garbage collection.
 
 JavaScript uses two primary structures to organize memory:
@@ -848,7 +1073,7 @@ Heap: Used for dynamic data whose size may change, including objects, arrays, an
 
 Modern engines (like Chrome's V8) primarily use the Mark-and-Sweep algorithm to determine what to delete.
 
-119.) Describe the difference between Shallow and Deep copying.
+✓119.) Describe the difference between Shallow and Deep copying.
 Ans: Shallow copying: in the shallow copy of an object, the main properties are copied, but any nested objects or arrays are still linked to the original.
 
 const original = {name:"John", address:{city:"Delhi"}};
@@ -860,7 +1085,7 @@ const shallowCopy = Object.assign({}, original);
 //spread operator
 const shallowCopy2 = {...original};
 
-shallowCopy2.address.city = "New city";
+shallowCopy2.address.city = "New city"; 
 console.log(original.address.city);
 
 Deep copying: With a deep copy, every part of the object, including all nested objects or arrays, is fully copied, ensuring the modifications to the copy doesn't affect the original.
@@ -872,7 +1097,379 @@ deepCopy.address.city = "New city";
 
 console.log(original.address.city);
 
-120.)What is diff b/w map and forEach?
+✓120.)What is diff b/w map and forEach?
 Ans-The core difference is that map() transforms elements and returns a new array, while forEach() executes an action on each element and returns nothing (undefined).
 
-121.) 
+121.)what is the purpose of the Map Method in JavaScript?
+Ans: The map() method in javascript is used to create a new array by applying a specified function to each element in an existing array.
+ 
+ const numbers = [2,3,4,5,6];
+ const double = numbers.map(num => num * 2);
+
+ console.log(numbers)
+ console.log(double)
+
+✓122.)what is difference between fetch and axios?
+Ans- Both Fetch and Axios are excellent tools for making HTTP requests in JavaScript. However, Fetch is a built-in browser API (native), while Axios is a feature-rich, third-party library.
+The core differences between the two:
+Setup: Fetch requires no installation and works natively in all modern browsers and Node.js. Axios requires an external dependency to be installed (via npm/yarn).
+JSON Parsing: Fetch requires a two-step process to parse server responses into a JavaScript object. Axios automatically parses the response body into JSON.
+Error Handling: Fetch only throws errors on actual network failures (meaning a 404 or 500 status code counts as a "success" state unless you manually check response.ok). Axios automatically treats 4xx and 5xx status codes as errors.
+
+Advanced Features: Axios features built-in interceptors (for modifying requests/responses on the fly), request cancellation, timeout support, and upload progress tracking. Fetch requires manual setup of AbortController and custom wrapper classes to achieve these functionalities.
+
+123.)diff b/w function scope and block scope?
+Ans- Function scope means a variable is accessible anywhere inside the specific function where it is declared. Block scope means a variable is only accessible within the specific "block" (e.g., within curly braces {}) where it is declared, such as inside if statements or loops.
+
+124.) how to clone the object without modifiying the original object 
+125.)how to clone the array without modifying the original array 
+126.)what is stack, queue, microtask, macrotask, webapi in javascript engine 
+127.)diff b/w constructor function vs normal function
+128.)what is object.keys,object.create, object.assign, object.values
+129.)how to implement exeception handling in js
+130.)how to import and exports
+131.)what are mouse events
+132.)what are keyboard events 
+133.)what are window events
+134.)what are touch events
+135.)what is window object
+136.)what is client and server communication
+
+137.)Why we use polyfill?
+Ans- We use a polyfill to provide modern web functionality in older or incompatible browsers that lack native support for those features. It acts as a bridge, allowing developers to write clean, modern code without worrying that users on older devices will experience broken functionality.
+
+138.)what is callstack in js?
+Ans- The JavaScript call stack is a mechanism used by the runtime engine to keep track of function execution in a program. It serves as the engine's internal "to-do list," dictating which function is currently running and which ones are waiting to be executed next.
+
+139.)What is infinite currying?
+Ans- Infinite currying is a functional programming technique where a function returns a new function indefinitely, allowing you to chain arguments across multiple consecutive calls. The chain only stops and computes the final result when it receives an empty call (or no arguments).
+function sum(a) {
+  return function(b) {
+    // If an argument is passed, recursively add and chain
+    if (b) {
+      return sum(a + b);
+    }
+    // If no argument is passed, return the accumulated total
+    return a;
+  };
+}
+
+// Chained execution
+console.log(sum(1)(2)(3)(4)()); // Output: 10
+console.log(sum(5)(10)());      // Output: 15
+
+140.)What is difference b/w promise and callback?
+Ans- The fundamental difference is that a callback is a function passed as an argument to another function and executed once a task finishes, whereas a promise is a special object returned by an asynchronous function that acts as a placeholder for a future value.
+
+141.)what is the difference between undeclared and undefined?
+Ans- In programming (especially JavaScript), undefined means a variable has been declared but not assigned a value. Undeclared means the variable does not exist in the code at all; trying to access it will throw a fatal error.
+ 
+142.)Give me all array method in js?
+Ans- // push...adds the element at the end of the array
+
+const mobiles = ["lg","oppo","vivo","samsung"];
+
+// add at the end
+mobiles.push("iphone 17 pro max")
+console.log(mobiles); 
+
+// pop method removes the element from the end of the array
+
+const mobiles1 = ["lg","oppo","vivo","samsung"];
+
+// removes the last element
+mobiles1.pop();
+mobiles1.pop();
+
+console.log(mobiles1);
+
+// shift method...removes the first element from the array
+
+let names = ["rama","ravi","venkat","amit"];
+names.shift();
+console.log(names);
+
+// unshift method...adds the new element at the beggining of the array
+let names1 = ["rama","ravi","venkat","amit"];
+
+// adds at the beginning
+names1.unshift("shyam")
+console.log(names1);
+
+// map...creates the new array by applying the function on each element
+
+// array.map(function(elem){
+    //return newValue
+// })
+
+// double the numbers
+
+let numbers = [1,2,3,4,5];
+
+let doubleNumbers = numbers.map(function(number){
+    return number*2
+})
+console.log(doubleNumbers);
+
+// extract the property from the objects
+let users = [
+    {name:"rama",age:50},
+    {name:"amit",age:25},
+
+]
+let names = users.map(function(user){
+    return user.name
+})
+console.log(names);
+
+
+find method
+// find returns the first element that satisfies the given condition
+// if not found -> returns undefined
+// findindex...find the first index that matching the condition
+// findLast -> returns the last element that satisfies the condition
+// find the first even number
+
+
+let nums = [5, 7,10, 12, 16, 21, 20];
+
+let result = nums.find(function(n){
+    return n%2===0
+})
+console.log("first even:-",result);
+
+
+let resultIndex = nums.findIndex(function(n){
+    return n%2===0
+})
+console.log("index of first even:-",resultIndex);
+
+let resultFindLast = nums.findLast(function(n){
+    return n%2===0
+})
+console.log("last value that satisfies the condition:-",resultFindLast);
+
+let resultFindLastIndex = nums.findLastIndex(function(n){
+    return n%2===0
+})
+console.log("last index value that satisfies the condition:-",resultFindLastIndex);
+
+// find the number >100
+
+let numbers=[20,50,200,150,100];
+
+let result1 = numbers.find(function(num){
+    return num>100
+})
+console.log(result1);
+
+
+// sort method arranges array elements in the order
+
+let names = ["iphone","vivo","BPL","samsung"];
+names.sort()
+console.log(names);
+
+// ex-2
+let values = [10,20,100,30,200,300,4,400,40];
+values.sort();
+console.log(values);
+
+// we are going to use compare function..
+
+// compare function tell sort how to compare two numbers
+
+// array.sort(function(a,b){
+//     return a-b //ascending
+// })
+
+// array.sort(function(a,b){
+//     return b-a //descending
+// })
+
+let values1 = [10,20,100,30,200,300,4,400,40];
+
+let asc=values1.sort(function(a,b){
+    return a-b //ascending
+})
+console.log(asc);
+
+
+let des=values1.sort(function(a,b){
+    return b-a //descending
+})
+console.log(des);
+
+
+filter method- 
+// filter() creates the new array containing all the elements that satisfy the condition
+
+let numbers = [50,100,150,200,250]
+
+let result = numbers.filter(function(number){
+    // return number%2===0
+    return number>100
+})
+
+console.log(result);
+
+// array of students
+
+let students = [
+    {name:"ravi", age:53},
+    {name:"rama", age:32},
+    {name:"venkat", age:66}
+]
+let filterStudent = students.filter(function(student){
+    return student.age > 50
+})
+console.log(filterStudent);
+
+
+some method-
+// some method checks whether at least one element satisfies the condition
+// return true -> if any one matches
+// return false -> if no element matches
+
+// is there any even number
+
+let nums = [5,7,9,13]
+
+let result = nums.some(function(num){
+    return num % 2===0
+})
+console.log(result);
+
+// any -ve number in the marks
+
+let marks = [90,-4,60,70];
+
+let marksFinal = marks.some(function(mark){
+    return mark < 0
+})
+
+console.log(marksFinal);
+
+
+fill method-
+// fill replaces the elements with the static value
+// array.fill(value, startindex, endindex)
+// startindex ...inclusive
+// endindex ...exclusive(endindex will be excluded)
+
+let arr = [1,2,3,4,5]
+arr.fill(100)
+// arr.fill(100,1)
+// arr.fill(100,1,4) //1,100,100,100,5
+console.log(arr);
+
+
+every method
+// check if all elements satisfy condition
+// true -> if all elements satisfy condition
+// false -> if one fail
+
+let marks = [90, 89, 100, 91, 34];
+
+let proceed = marks.every(function(mark){
+    return mark > 33
+})
+
+console.log(proceed);
+
+
+// reverse method: reverse the original array
+
+let numbers = [1,2,3,4,5];
+let names = ["A","B","C"];
+
+numbers.reverse();
+names.reverse();
+
+console.log(numbers);
+console.log(names);
+
+
+// array.reduce(function(accumulator, currentValue){
+// return newValue
+// })
+
+// accumulator ....result collected so far
+// currentValue ....current element from the array
+// initialValue ....starting value of the accumulator
+
+let numbers = [10,20,30,40];
+
+let sum = numbers.reduce(function(acc, curr){
+    return acc + curr
+}, 0)
+console.log(sum);
+
+
+// splice, slice and join
+
+// splice...remove elements, add elements and replace elements
+
+//array.splice(startIndex, deleteCount, item1, item2 ....)
+
+// let numbers =[10, 20, 30, 40, 50];
+
+// remove 2 elements from index 1
+
+// let remove = numbers.splice(1, 2)
+// console.log(remove);
+
+// numbers.splice(1, 2, "amit", "sumit");
+// console.log(numbers);
+
+// slice....creates the new array by copying the portion of the array
+// array.slice(startIndex, endIndex);
+// startIndex(included)
+// endIndex(excluded)
+
+// let numbs = [10, 20, 30, 40, 50]
+
+// let part = numbs.slice(2, 5)
+// console.log(part);
+
+// join...convert array to single string with the separator
+
+let names = ["ram","venkat","john"];
+let result = names.join(" ")
+console.log(result);
+
+143.)what is difference between call apply and bind in javascript?
+Ans- The core difference is that call() and apply() execute a function immediately, whereas bind() returns a brand-new function to be executed later. All three methods are used to explicitly set the this context inside a JavaScript function.
+
+144.)which have higher preference settimeout and promise?
+Ans- In JavaScript, Promises always have a higher preference (priority) than setTimeout.This is because the JavaScript event loop categorizes asynchronous operations into two distinct queues, with Promises executing as VIPs before any setTimeout timer fires:Microtask Queue (Promises): Where Promise .then() and .catch() callbacks go.Macrotask/Task Queue (setTimeout): Where setTimeout callbacks go after their timer ends.
+
+145.)what is difference between call stack and event loop?
+Ans- The core difference is that the Call Stack executes your code line-by-line right away, while the Event Loop schedules when your background code can finally run.
+
+146.)what is difference between if else and ternary operator?
+Ans- The fundamental difference between them is that an if-else statement executes code blocks, whereas a ternary operator evaluates to a single value.
+
+how to find the 3rd largest number
+how to find the 2nd largest number
+how to remove the duplicates from the given array 
+to find the sum of the numbers
+count the char in the given string 
+how to reverse the string without using any predefined methods 
+how to find the palindrome, primenumber, fiboncci series, even number, odd numbers 
+to print the differnt patters
+given two arrays, combine both the arrays and remove the duplicates and sort it
+
+//find the shortest word from string
+
+let str = "hello how are you";
+
+function findShortest(str){
+    let word = str.split(" ");
+    let res = word.reduce((acc, curr) => 
+        curr.length < acc.length ? curr : acc
+    )
+    return res
+}
+console.log(findShortest(str));
+

@@ -29,3 +29,119 @@ Ans- In a MERN stack application, you can implement Server-Side Rendering (SSR) 
 
 5.)explain about the indexing in mongodb and about the performance impact?
 Ans- In MongoDB, indexing is a method used to improve the efficiency and speed of data retrieval operations. Without indexes, MongoDB must perform a collection scan, which means it has to look through every single document in a collection to find the data that matches a query.
+
+6.)What is diff b/w rdbms and nosql?
+Ans- // SQL(Relational Database)
+// --------------------------------
+
+// Data will be stores in tables(rows & columns), also we need to have the Relational b/w the tables 
+joins
+
+// Non-Relational database(noSQL):
+// ------------------------------------
+// Data will be stored in the JSON document (BSON...Binary JSON)
+
+what is diff b/w sql and nosql
+
+7.)what is mongodb?
+Ans-MongoDB is a highly scalable, document-oriented NoSQL database designed for modern application development.
+
+8.)what are the main features of mongodb?
+Ans- it stores data in flexible, JSON-like formats.
+
+9.)how to setup the mongodb?
+Ans- Setting up MongoDB can be done either locally on your machine or via a cloud-based cluster. For most modern projects, using MongoDB Atlas (the cloud service) is the fastest and easiest way to get started.
+
+10.)what is mongo shell?
+Ans- The MongoDB Shell (officially called mongosh) is the interactive, JavaScript-based command-line interface for MongoDB. It acts as a direct line to your database, letting developers and administrators effortlessly run queries, perform CRUD operations, automate scripts, and manage server instances.
+
+11.)what is mongo compass?
+Ans- MongoDB Compass is the official Graphical User Interface (GUI) for MongoDB. It allows developers, analysts, and administrators to interact with their databases visually—enabling them to explore data, build queries, manage indexes, and monitor performance without having to write command-line code.
+
+12.)what is mongo atlas?
+Ans- MongoDB Atlas is a fully managed, multi-cloud database-as-a-service (DBaaS) built by the creators of MongoDB. It eliminates the need to manually provision servers, configure networks, or handle software upgrades, allowing developers to deploy scalable databases quickly across AWS, Azure, and Google Cloud.
+
+13.)command to show the list of dbs?
+Ans- show dbs or show databases
+
+14.)how to create the collection?
+Ans- db.createCollection("collection_name")
+
+15.)what is document?
+Ans- A document is a written, drawn, presented, or digital record of information.
+
+16.)what is collection?
+Ans- group of document are nothing but collection in noSQL, Table in SQL
+
+17.)how the data is stored in monogdb?
+Ans- MongoDB stores data as BSON (Binary JSON) documents. Unlike relational databases that use rigid tables and rows, MongoDB organizes data hierarchically into a flexible, document-oriented structure.
+
+18.)what is bson?
+Ans- BSON stands for Binary JSON. It is a binary-encoded, lightweight data format used to store and transfer documents that are structured similarly to JSON.
+
+19.)what is diff json vs bson?
+Ans- JSON is a human-readable, text-based format designed for data exchange. BSON (Binary JSON) is a binary-encoded serialization of JSON-like documents, designed specifically for speed, space efficiency, and support for advanced data types in databases like MongoDB.
+
+20.)what are the advantanges of mongodb?
+Ans- MongoDB is a highly popular document-oriented NoSQL database known for its flexibility, scalability, and performance. It is particularly advantageous for modern applications that handle unstructured or rapidly evolving data, allowing developers to build features faster by storing and accessing data natively as code.
+
+21.)what are the limitations of the mongodb?
+Ans- While MongoDB is highly scalable and flexible, its primary limitations include higher memory consumption, document size limits, and less mature multi-document transaction support compared to traditional relational databases.
+
+22.)how to insert single document?
+Ans- db.collectionName.insertOne({
+  name: "John Doe",
+  age: 30,
+  status: "active"
+})
+
+23.)how to insert many documents?
+Ans- db.collectionName.insertMany([
+  { name: "Alice", age: 28 },
+  { name: "Bob", age: 34 },
+  { name: "Charlie", age: 25 }
+])
+
+24.)how to find the data for the single doc?
+Ans- 
+25.)diff insertOne and insertMany 
+26.)diff b/w updateOne and updateMany
+27.)diff b/w findOne and findMany 
+28.)diff b/w deleteOne and DeleteMany 
+29.)what is $set operator in mondob
+30.)what is $lookup 
+31.)what is $projection 
+32.)what is indexing in mongodb
+33.)what is $match
+34.)what is limit() in monogdb 
+35.)how to sort the data
+36.)how to count the documents 
+37.)how to replace the document
+38.)what are the different data types in mongodb
+39.)what is objectId 
+40.)what is $in and $nin 
+41.)what is $and, $or, $not, $nor
+42.)what $regex 
+43.)how do we query for the embedded documents 
+44.)what is index in mongodb 
+45.)why we have to do indexing
+46.)how do we create index in mongodb 
+47.)how to take backup data in mongodb
+48.)what is unqiue index 
+49.)what is hashed index 
+50.)what is expalin() method 
+51.)what is aggregation 
+52.)what is $unwind 
+53.)how to cal avg in aggregation 
+54.)what is $merge atatge 
+55.)what is schema-less in mongodb 
+56.)wha are the pros and cons of the embedded documents 
+57.)what is data modeling 
+58.)what is sharding in mongodb 
+59.)what is replica set 
+60.)what is replication in mongodb 
+61.)what is expalin()
+62.)what is sharding in mongodb 
+63.)how to perfom joins in mongodb 
+64.)how do w ehandle relationships in monogdb 
+65.)expalin mongodb aggregation pipeline 
